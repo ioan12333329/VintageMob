@@ -184,7 +184,7 @@ box-sizing: border-box !important;
     
     /* Fundalul cu overlay întunecat pentru contrast maxim */
     background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.7)), 
-                url('gm1.jpg') no-repeat center center;
+               
     background-size: cover !important;
     background-attachment: fixed; /* Efect de parallax subtil */
 }
