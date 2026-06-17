@@ -9,7 +9,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,400&family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 
-    <!-- CSS PREMIUM AUDI-STYLE LUXURY BLACK HEADER -->
+    <!-- CSS PREMIUM PREMIUM - BLACK HEADER & NO OVERLAP -->
     <style>
         :root {
             --premium-black: #0B0B0B;
@@ -29,10 +29,10 @@
             -webkit-font-smoothing: antialiased;
         }
 
-        /* HEADER FIXAT PREMIUM - INTEGRAL NEGRU */
+        /* HEADER COMPLET NEGRU (FORȚAT) */
         .v-header-fixed {
-            background: #000000 !important; /* Fundal complet negru */
-            border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+            background: #000000 !important; 
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1) !important;
             position: fixed !important;
             top: 0;
             left: 0;
@@ -50,19 +50,18 @@
             align-items: center !important;
         }
 
-        /* Zonă flexibilă în stânga pentru a ține Hamburgerul + Logo împreună */
         .v-left-header-zone {
             display: flex;
             align-items: center;
             gap: 15px;
         }
 
-        /* LOGO SCRIS ALB PREMIUM */
+        /* LOGO COMPLET ALB */
         .v-logo-box .v-logo {
             font-family: 'Playfair Display', serif;
             font-size: 24px !important;
             font-weight: 700;
-            color: #ffffff !important; /* Scris Alb */
+            color: #ffffff !important; /* Forțat alb */
             text-decoration: none;
             letter-spacing: 2px;
             display: inline-block;
@@ -74,20 +73,20 @@
             gap: 35px !important;
         }
 
-        /* LINK-URI DE NAVIGARE ALBE PE DESKTOP CU HOVER AURIU */
+        /* LOGO ȘI TEXTE MENIU COMPLET ALBE */
         .v-nav .v-link {
             font-family: 'Inter', sans-serif;
             font-size: 13px !important;
             text-transform: uppercase;
             letter-spacing: 1.5px;
             font-weight: 500;
-            color: #ffffff !important; /* Scris Alb */
+            color: #ffffff !important; /* Forțat alb */
             text-decoration: none !important;
             transition: color 0.3s ease;
         }
 
         .v-nav .v-link:hover {
-            color: var(--premium-gold) !important; /* Hover Auriu */
+            color: var(--premium-gold) !important;
         }
 
         .v-action {
@@ -106,7 +105,7 @@
             font-size: 10px;
             text-transform: uppercase;
             letter-spacing: 2px;
-            color: var(--premium-gold) !important; /* Etichetă Aurie */
+            color: var(--premium-gold) !important;
             margin-bottom: 2px;
         }
 
@@ -117,7 +116,7 @@
             color: #ffffff !important;
         }
 
-        /* HAMBURGER BUTTON - LINII AURII PENTRU CONTRAST */
+        /* HAMBURGER BUTTON AURIE PENTRU MOBIL */
         .v-mobile-toggle {
             display: none;
             background: none;
@@ -131,33 +130,21 @@
             display: block;
             width: 22px;
             height: 1.5px;
-            background: var(--premium-gold); /* Linii aurii */
+            background: var(--premium-gold);
             margin: 5px 0;
             transition: 0.3s ease;
         }
 
-        /* HERO INTEGRAT FOTO */
+        /* CORECTARE HERO: Eliminat elemente duplicat din HTML */
         .hero {
             position: relative;
             width: 100%;
-            min-height: 70vh;
+            min-height: 75vh;
             display: flex;
             align-items: center;
             justify-content: center;
             overflow: hidden;
-            background-color: var(--premium-black);
-            margin-top: 65px;
-        }
-
-        .hero-bg-img {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            opacity: 0.5;
-            z-index: 1;
+            margin-top: 65px; 
         }
 
         .hero-content {
@@ -178,7 +165,6 @@
                 display: block !important;
             }
 
-            /* SERTAR MENIU MOBIL - FUNDAL NEGRU LUXURY */
             .v-nav {
                 position: fixed;
                 top: 0;
@@ -186,7 +172,7 @@
                 width: 85%;
                 max-width: 320px;
                 height: 100vh;
-                background: #000000 !important; /* Meniu mobil negru complet */
+                background: #000000 !important;
                 flex-direction: column !important;
                 justify-content: flex-start !important;
                 align-items: flex-start !important;
@@ -203,7 +189,6 @@
                 left: 0 !important;
             }
 
-            /* LINK-URI MENIU MOBIL - ALBE CU ACCENT AURIU LA BORDER */
             .v-nav .v-link {
                 font-size: 18px !important;
                 letter-spacing: 2px;
@@ -213,12 +198,7 @@
                 border-bottom: 1px solid rgba(255,255,255,0.08) !important;
                 padding-bottom: 12px;
             }
-            
-            .v-nav .v-link:hover, .v-nav .v-link:active {
-                color: var(--premium-gold) !important;
-            }
 
-            /* Schimbare în 'X' alb/auriu la activare */
             .v-mobile-toggle.active span:nth-child(1) {
                 transform: translateY(6.5px) rotate(45deg);
                 background: #ffffff;
@@ -349,7 +329,7 @@
 
 
     <section class="hero">
-        <img src="A11.jpg" alt="VintageMob Banner Principal" class="hero-bg-img">
+        <!-- Poza suplimentară din HTML a fost scoasă complet ca să ruleze doar fundalul tău din CSS -->
         <div class="hero-content">
             <h1>VintageMob</h1>
             <p>Arta restaurării mobilei vechi</p>
