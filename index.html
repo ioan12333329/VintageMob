@@ -3,142 +3,270 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- OPTIMIZARE TELEFON: Suport pentru iconițe de apel și randare rapidă pe mobil -->
     <meta name="format-detection" content="telephone=no">
     <title>VintageMob | Arta Restaurării Mobilei</title>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,400&family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 
-    <!-- STILURI DIRECTE PENTRU OPTIMIZARE MOBIL ACCELERATĂ -->
+    <!-- CSS PREMIUM ȘI RESPONSIV DIRECT (STIL AUDI PROGRESS) -->
     <style>
-        /* Corecție globală anti-scroll orizontal pe telefoane */
+        :root {
+            --premium-black: #0B0B0B;
+            --premium-gray: #1A1A1A;
+            --premium-light-gray: #F5F5F7;
+            --premium-gold: #C5A880;
+            --text-muted: #86868B;
+        }
+
+        /* Reset global anti-overflow */
         html, body {
             overflow-x: hidden;
             max-width: 100%;
             margin: 0;
             padding: 0;
+            background-color: #ffffff;
+            -webkit-font-smoothing: antialiased;
         }
 
-        @media (max-width: 768px) {
-            /* 1. Resetare Header pentru ecran mic */
-            .v-header-fixed {
-                position: relative !important; /* Pe mobil e mai sigur să nu blocheze ecranul dacă meniul e înalt */
-                padding: 10px 0 !important;
-            }
+        /* HEADER OPTIMIZAT ȘI FIXAT */
+        .v-header-fixed {
+            background: rgba(255, 255, 255, 0.92) !important;
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+            position: fixed !important;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 9999 !important;
+            box-sizing: border-box;
+            transition: all 0.3s ease;
+        }
+
+        .v-header-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 20px 40px !important;
+            display: flex !important;
+            justify-content: space-between !important;
+            align-items: center !important;
+            position: relative;
+        }
+
+        .v-logo-box .v-logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 24px !important;
+            font-weight: 700;
+            color: var(--premium-black) !important;
+            text-decoration: none;
+            letter-spacing: 2px;
+        }
+
+        .v-nav {
+            display: flex !important;
+            gap: 35px !important;
+        }
+
+        .v-nav .v-link {
+            font-family: 'Inter', sans-serif;
+            font-size: 13px !important;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            font-weight: 500;
+            color: var(--premium-black) !important;
+            text-decoration: none !important;
+            transition: color 0.3s ease;
+        }
+
+        .v-nav .v-link:hover {
+            color: var(--premium-gold) !important;
+        }
+
+        .v-tel-link {
+            text-decoration: none !important;
+            color: var(--premium-black) !important;
+            text-align: right;
+            display: block;
+        }
+
+        .v-tel-label {
+            display: block;
+            font-size: 10px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: var(--text-muted);
+            margin-bottom: 2px;
+        }
+
+        .v-tel-num {
+            font-size: 14px;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+        }
+
+        /* RECEPTIVITATE ELEMENTE DE CONTROL MOBILE (HAMBURGER) */
+        .v-mobile-toggle {
+            display: none;
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 10px;
+            z-index: 10000;
+        }
+
+        .v-mobile-toggle span {
+            display: block;
+            width: 22px;
+            height: 1.5px;
+            background: var(--premium-black);
+            margin: 5px 0;
+            transition: 0.3s ease;
+        }
+
+        /* COMPORTAMENT MOBIL (MEDIA QUERY) */
+        @media (max-width: 991px) {
             .v-header-container {
-                flex-direction: column !important;
-                align-items: center !important;
-                gap: 12px !important;
-                padding: 0 15px !important;
-            }
-            .v-nav {
-                justify-content: center !important;
-                flex-wrap: wrap !important;
-                gap: 15px !important;
-                width: 100% !important;
-            }
-            .v-logo-box {
-                margin: 5px 0 !important;
-            }
-            .v-action {
-                width: 100% !important;
-                text-align: center !important;
-            }
-            .v-tel-link {
-                display: inline-block !important;
-                width: 100% !important;
-                padding: 10px 0 !important;
-                background: rgba(0, 0, 0, 0.03) !important;
-                border-radius: 4px !important;
+                padding: 15px 24px !important;
             }
 
-            /* 2. Secțiunea Hero adaptată */
+            .v-mobile-toggle {
+                display: block !important; /* Arătăm hamburgerul */
+            }
+
+            /* Meniul devine un sertar premium pe tot ecranul */
+            .v-nav {
+                position: fixed;
+                top: 0;
+                right: -100%;
+                width: 100%;
+                height: 100vh;
+                background: #ffffff;
+                flex-direction: column !important;
+                justify-content: center !important;
+                align-items: center !important;
+                gap: 40px !important;
+                transition: right 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+                z-index: 9998;
+            }
+
+            .v-nav.active {
+                right: 0 !important; /* Când e activ, intră în scenă */
+            }
+
+            .v-nav .v-link {
+                font-size: 20px !important;
+                letter-spacing: 3px;
+            }
+
+            /* Schimbăm hamburgerul în 'X' când e deschis */
+            .v-mobile-toggle.active span:nth-child(1) {
+                transform: translateY(6.5px) rotate(45deg);
+            }
+            .v-mobile-toggle.active span:nth-child(2) {
+                opacity: 0;
+            }
+            .v-mobile-toggle.active span:nth-child(3) {
+                transform: translateY(-6.5px) rotate(-45deg);
+            }
+
+            .v-action {
+                display: none !important; /* Ascundem numărul lung din header pe mobil ca să nu încurce */
+            }
+
+            /* Compensare spațiu pentru conținut, header-ul fiind fixat */
+            body {
+                padding-top: 60px;
+            }
+
+            /* 2. Hero Section */
             .hero {
-                padding: 60px 15px !important;
-                text-align: center !important;
+                padding: 120px 24px 80px 24px !important;
+                text-align: center;
             }
             .hero h1 {
-                font-size: 2.8rem !important;
+                font-size: 3rem !important;
+                letter-spacing: -1px !important;
+                font-weight: 700;
             }
 
-            /* 3. Secțiunea Concept */
+            /* 3. Concept Section */
             .v-concept-container {
-                padding: 30px 15px !important;
+                padding: 60px 24px !important;
             }
             .v-concept-title {
-                font-size: 1.8rem !important;
+                font-size: 2.2rem !important;
+                line-height: 1.2 !important;
             }
 
-            /* 4. Timeline complet responsiv pe verticală (stil cascadă pe mobil) */
+            /* 4. Timeline (Audi Vertical Flow) */
             .v-timeline-container {
-                padding: 20px 10px !important;
+                padding: 40px 24px !important;
             }
             .v-timeline-line {
-                left: 15px !important; /* Mutăm axul în stânga complet */
+                left: 4px !important;
             }
             .v-step {
                 width: 100% !important;
                 left: 0 !important;
-                padding-left: 35px !important;
-                padding-right: 10px !important;
+                padding-left: 30px !important;
+                padding-right: 0 !important;
                 text-align: left !important;
-                box-sizing: border-box !important;
-                margin-bottom: 30px !important;
-            }
-            .v-step-dot {
-                left: 15px !important;
-                transform: translateX(-50%) !important;
-            }
-            .v-step-content {
-                width: 100% !important;
-            }
-
-            /* 5. Grilele de imagini / Randuri */
-            .proiecte-home {
-                padding: 15px !important;
-            }
-            .rand {
-                flex-direction: column !important; /* Din linie devine coloană */
-                gap: 20px !important;
                 margin-bottom: 40px !important;
             }
+            .v-step-dot {
+                left: 4px !important;
+            }
+            .v-step-number {
+                font-size: 12px !important;
+                color: var(--premium-gold);
+            }
+
+            /* 5. Grile Imagini Asimetrice (Se aliniază elegant) */
+            .rand {
+                flex-direction: column !important;
+                gap: 24px !important;
+                padding: 0 24px !important;
+                margin-bottom: 60px !important;
+            }
             .rand.invers {
-                flex-direction: column !important; /* Anulează inversarea pe mobil */
+                flex-direction: column !important;
             }
             .poza, .text-box {
                 width: 100% !important;
                 padding: 0 !important;
             }
-            .poza img {
-                width: 100% !important;
-                height: auto !important;
-                border-radius: 4px !important;
+            .text-box h3 {
+                font-size: 1.5rem !important;
+                margin-top: 15px;
             }
 
-            /* 6. Secțiunea Statistici */
+            /* 6. Statistici */
             .stats-section {
                 flex-direction: column !important;
-                gap: 25px !important;
-                padding: 40px 15px !important;
+                gap: 40px !important;
+                padding: 60px 24px !important;
+                background-color: var(--premium-light-gray) !important;
             }
 
-            /* 7. Footer Cinematic adaptat */
+            /* 7. Footer Cinematic */
             .cinematic-footer {
-                padding: 40px 15px 20px 15px !important;
+                padding: 60px 24px 30px 24px !important;
             }
             .footer-grid {
-                grid-template-columns: 1fr !important; /* Toate coloanele se așază una sub alta */
-                gap: 30px !important;
-                text-align: center !important;
+                grid-template-columns: 1fr !important;
+                gap: 40px !important;
+                text-align: left !important;
             }
             .footer-bg-text {
-                font-size: 14vw !important; /* Împiedică textul gigant din spate să spargă ecranul */
-                opacity: 0.03 !important;
+                font-size: 16vw !important;
+                bottom: 10px !important;
             }
             .footer-bottom {
                 flex-direction: column !important;
-                gap: 15px !important;
-                text-align: center !important;
+                align-items: flex-start !important;
+                gap: 20px !important;
+                border-top: 1px solid rgba(255,255,255,0.1);
+                padding-top: 30px;
             }
         }
     </style>
@@ -149,16 +277,23 @@
    <header class="v-header-fixed">
     <div class="v-header-container">
         
-        <nav class="v-nav">
+        <div class="v-logo-box">
+            <a href="index.html" class="v-logo">VM</a>
+        </div>
+
+        <!-- BUTON NATIV MOBIL PENTRU MENIU MĂRIT -->
+        <button class="v-mobile-toggle" id="mobile-menu-btn" aria-label="Meniu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+        <nav class="v-nav" id="v-navigation-menu">
             <a href="index.html" class="v-link">Acasă</a>
             <a href="portofoliu.html" class="v-link">Portofoliu</a>
             <a href="despre.html" class="v-link">Atelier</a>
             <a href="contact.html" class="v-link">Contact</a>
         </nav>
-
-        <div class="v-logo-box">
-            <a href="index.html" class="v-logo">VM</a>
-        </div>
 
         <div class="v-action">
             <a href="tel:0767902790" class="v-tel-link">
@@ -376,6 +511,36 @@
     </div>
 </footer>
 
+    <!-- SCRIPT LOGICĂ MENIU JAVASCRIPT DIRECT -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const menuBtn = document.getElementById('mobile-menu-btn');
+            const navMenu = document.getElementById('v-navigation-menu');
+            const navLinks = document.querySelectorAll('.v-link');
+
+            // Toggle la click pe hamburger
+            menuBtn.addEventListener('click', function() {
+                menuBtn.classList.toggle('active');
+                navMenu.classList.toggle('active');
+                
+                // Blocăm scroll-ul pe fundal când meniul e deschis
+                if(navMenu.classList.contains('active')) {
+                    document.body.style.overflow = 'hidden';
+                } else {
+                    document.body.style.overflow = '';
+                }
+            });
+
+            // Închidem meniul când se dă click pe un link din el
+            navLinks.forEach(link => {
+                link.addEventListener('click', function() {
+                    menuBtn.classList.remove('active');
+                    navMenu.classList.remove('active');
+                    document.body.style.overflow = '';
+                });
+            });
+        });
+    </script>
     <script src="script.js"></script>
 </body>
 </html>
