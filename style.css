@@ -140,7 +140,7 @@ header, .atelier-header, .header-premium, .navbar {
     letter-spacing: 1px !important;
 }
 
-.v-line-anim {
+.v-header-fixed .v-line-anim {
     position: absolute !important;
     bottom: -5px !important;
     right: 0 !important;
@@ -181,7 +181,6 @@ header, .atelier-header, .header-premium, .navbar {
     position: relative;
     overflow: hidden;
     
-    /* REPARARE CONFLICT ȘI LEGĂTURĂ DIRECTĂ PENTRU IMAGINEA GM.JPG PENTRU CONSTANȚA */
     background: linear-gradient(rgba(5, 5, 5, 0.7), rgba(5, 5, 5, 0.85)), 
                 url('gm.jpg') no-repeat center center/cover !important;
     background-attachment: fixed !important;
@@ -607,7 +606,7 @@ header, .atelier-header, .header-premium, .navbar {
 .wa-link:hover .wa-svg { fill: #050505; transform: scale(1.1); }
 
 /* =========================================
-   CINEMATIC FOOTER - LIGA SUPERIOARĂ
+   CINEMATIC FOOTER - LIGA SUPERIOARĂ WITH REFINED VISITED FIX
    ========================================= */
 .cinematic-footer {
     position: relative;
@@ -635,6 +634,36 @@ header, .atelier-header, .header-premium, .navbar {
 .footer-grid { display: grid; grid-template-columns: 1.5fr 0.8fr 1fr 1fr; gap: 50px; margin-bottom: 80px; }
 .footer-label { display: block; font-family: 'Montserrat', sans-serif; font-size: 0.65rem; text-transform: uppercase; letter-spacing: 3px; color: #C5A47E; margin-bottom: 30px; }
 .footer-static-text { font-family: 'Cinzel', serif; font-size: 0.8rem; color: rgba(229, 217, 195, 0.6); margin-bottom: 12px; letter-spacing: 1px; }
+
+/* REPARARE RADICALĂ PENTRU LINKUL SPECIFIC DIN COLOANA BRAND (EVITARE CULOARE MOV) */
+.brand-col a,
+.brand-col a:link,
+.brand-col a:visited,
+.brand-col a:active {
+    font-family: 'Cinzel', serif !important;
+    font-size: 2.2rem !important;
+    font-weight: 700 !important;
+    color: #C5A47E !important;
+    text-decoration: none !important;
+    letter-spacing: 4px !important;
+    text-transform: uppercase !important;
+    display: inline-block !important;
+    margin-bottom: 20px !important;
+    transition: all 0.4s ease !important;
+}
+
+.brand-col a:hover {
+    color: #E5D9C3 !important;
+    letter-spacing: 6px !important;
+}
+
+.brand-desc {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.9rem;
+    line-height: 1.8;
+    color: rgba(229, 217, 195, 0.6);
+    max-width: 300px;
+}
 
 .footer-links a {
     font-family: 'Montserrat', sans-serif;
