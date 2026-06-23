@@ -8,15 +8,13 @@
     --gri-deschis: #D1D1D1;        /* Borduri și Hover */
     --gri-mediu: #666666;          /* Text secundar */
     --gri-inchis: #1A1A1A;         /* Header, Butoane, Text principal */
+    --gold: #c2a063;               /* Auriu Vintage */
+    --dark: #121212;               /* Negru Intens */
+    --dark-soft: #1a1a1a;          /* Gri Foarte Închis */
+    --light: #ffffff;              /* Alb Pur */
+    --grey-text: #a0a0a0;          /* Gri pentru Text Secundar */
+    --border-dark: #333;           /* Culoare borduri și separatoare */
 }
-
-
-
-
-
-
-
-
 
 /* RESETARE GENERALĂ */
 * {
@@ -27,1963 +25,16 @@
 }
 
 body {
-    background-color: var(--alb-pur);
-    color: var(--gri-inchis);
-    line-height: 1.6;
-}
-
-/* ============================================================
-HEADER SUPREME - VINTAGEMOB (FINAL OPTIMIZED)
-============================================================ */
-
-.atelier-header {
-position: fixed !important;
-top: 0 !important;
-left: 0 !important;
-width: 100% !important;
-background: rgba(5, 5, 5, 0.95) !important; /* Negru intens, ușor transparent */
-backdrop-filter: blur(15px) !important;
-border-bottom: 1px solid rgba(197, 164, 126, 0.1) !important;
-padding: 20px 0 !important;
-z-index: 9999 !important;
-transition: all 0.4s ease !important;
-}
-
-.header-inner {
-max-width: 1400px !important;
-margin: 0 auto !important;
-padding: 0 50px !important;
-display: grid !important;
-grid-template-columns: 1fr auto 1fr !important; /* Centrare matematică a logoului */
-align-items: center !important;
-}
-
-/* --- NAVIGARE (STÂNGA) --- */
-.header-nav {
-display: flex !important;
-gap: 35px !important;
-}
-
-.nav-link {
-font-family: 'Montserrat', sans-serif !important;
-font-size: 0.75rem !important;
-text-transform: uppercase !important;
-letter-spacing: 2px !important;
-color: rgba(229, 217, 195, 0.5) !important;
-text-decoration: none !important;
-transition: 0.4s ease !important;
-font-weight: 400 !important;
-}
-
-.nav-link:hover {
-color: #E5D9C3 !important;
-transform: translateY(-1px) !important;
-}
-
-/* --- LOGO (CENTRU) --- */
-.logo-classic {
-font-family: 'Cinzel', serif !important;
-font-size: 2.6rem !important;
-font-weight: 700 !important;
-color: #C5A47E !important;
-text-decoration: none !important;
-letter-spacing: 6px !important;
-text-transform: uppercase !important;
-transition: 0.5s cubic-bezier(0.22, 1, 0.36, 1) !important;
-line-height: 1 !important;
-display: block !important;
-}
-
-.logo-classic:hover {
-color: #E5D9C3 !important;
-letter-spacing: 8px !important;
-text-shadow: 0 0 25px rgba(197, 164, 126, 0.3) !important;
-}
-
-/* --- ACTION / TEL (DREAPTA) --- */
-.header-action {
-display: flex !important;
-justify-content: flex-end !important;
-}
-
-.consultancy-link {
-text-align: right !important;
-text-decoration: none !important;
-position: relative !important;
-}
-
-.consultancy-label {
-display: block !important;
-font-family: 'Montserrat', sans-serif !important;
-font-size: 0.55rem !important;
-text-transform: uppercase !important;
-letter-spacing: 2px !important;
-color: rgba(229, 217, 195, 0.4) !important;
-margin-bottom: 2px !important;
-}
-
-.consultancy-num {
-font-family: 'Cinzel', serif !important;
-font-size: 0.95rem !important;
-color: #E5D9C3 !important;
-letter-spacing: 1px !important;
-transition: 0.4s ease !important;
-}
-
-.link-underline {
-position: absolute !important;
-bottom: -2px !important;
-right: 0 !important;
-width: 0 !important;
-height: 1px !important;
-background: #C5A47E !important;
-transition: width 0.4s ease !important;
-}
-
-.consultancy-link:hover .link-underline {
-width: 100% !important;
-}
-
-.consultancy-link:hover .consultancy-num {
-color: #FFFFFF !important;
-}
-
-/* --- MOBILE FIX --- */
-@media (max-width: 1100px) {
-.header-nav { display: none !important; }
-.header-inner {
-grid-template-columns: 1fr 1fr !important;
-padding: 0 30px !important;
-}
-.logo-classic { font-size: 2rem !important; }
-}
-
-/* ============================================================
-ULTRA-PRIORITY: ANULARE STILURI EXTERNE
-============================================================ */
-header, header *, .logo-classic, .nav-link, .consultancy-num {
-box-sizing: border-box !important;
-}
-
-
-
-
-/* =========================================
-   HERO SECTION - FULLSCREEN IMMERSIVE
-   ========================================= */
-.hero {
-    width: 100%;
-    height: 100vh; /* Ocupă exact 100% din înălțimea ecranului */
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    position: relative;
-    overflow: hidden;
-    
-    /* Fundalul cu overlay întunecat pentru contrast maxim */
-    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.7)), 
-               
-    background-size: cover !important;
-    background-attachment: fixed; /* Efect de parallax subtil */
-}
-
-.hero h1 {
-    font-family: 'Cinzel', serif;
-    font-size: clamp(3rem, 10vw, 6rem); /* Se adaptează de la mobil la desktop */
-    color: #fdfaf5;
-    margin-bottom: 20px;
-    letter-spacing: 15px;
-    text-transform: uppercase;
-    font-weight: 700;
-    text-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
-    animation: fadeInDown 1.5s ease;
-}
-
-.hero p {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 1.2rem;
-    color: #C5A47E; /* Culoarea logo-ului pentru consistență */
-    letter-spacing: 8px;
-    text-transform: uppercase;
-    font-weight: 300;
-    position: relative;
-    padding-top: 30px;
-    animation: fadeInUp 1.5s ease;
-}
-
-/* Linia elegantă sub subtitlu */
-.hero p::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 80px;
-    height: 1px;
-    background-color: #C5A47E;
-}
-
-/* =========================================
-   RÂNDURI ZIG-ZAG (HOME REFINEMENT)
-   ========================================= */
-.proiecte-home {
-    background-color: #050505; /* Negru pur pentru fundal */
-    padding: 100px 0;
-}
-
-.rand {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 80px 10%;
-    gap: 80px;
-    min-height: 60vh;
-}
-
-/* Alternanța automată (Zig-Zag) */
-.rand:nth-child(even) {
-    flex-direction: row-reverse;
-}
-
-.poza {
-    flex: 1.2;
-    overflow: hidden;
-    line-height: 0;
-    border: 1px solid rgba(197, 164, 126, 0.1);
-}
-
-.poza img {
-    width: 100%;
-    height: auto;
-    display: block;
-    transition: transform 1.2s cubic-bezier(0.19, 1, 0.22, 1);
-    filter: grayscale(20%);
-}
-
-.poza:hover img {
-    transform: scale(1.05);
-    filter: grayscale(0%);
-}
-
-.text-box {
-    flex: 1;
-}
-
-.text-box h3 {
-    font-family: 'Cinzel', serif;
-    font-size: 2rem;
-    color: #E5D9C3;
-    margin-bottom: 25px;
-    border-bottom: 1px solid #C5A47E;
-    padding-bottom: 15px;
-    display: inline-block;
-}
-
-.text-box p {
-    font-family: 'Montserrat', sans-serif;
-    color: rgba(229, 217, 195, 0.6);
-    line-height: 1.8;
-    font-size: 1.1rem;
-}
-
-/* Animații */
-@keyframes fadeInDown {
-    from { opacity: 0; transform: translateY(-30px); }
-    to { opacity: 1; transform: translateY(0); }
-}
-
-@keyframes fadeInUp {
-    from { opacity: 0; transform: translateY(30px); }
-    to { opacity: 1; transform: translateY(0); }
-}
-
-/* Mobile Fix */
-@media (max-width: 900px) {
-    .rand, .rand:nth-child(even) {
-        flex-direction: column;
-        padding: 50px 5%;
-        gap: 30px;
-        text-align: center;
-    }
-
-
-
-/* =========================================
-   ANIMATIE STATISTICI (REVEAL EFFECT)
-   ========================================= */
-
-.stats-section {
-    display: flex;
-    justify-content: space-around;
-    padding: 120px 10%;
-    background-color: #050505;
-    border-top: 1px solid rgba(197, 164, 126, 0.05);
-}
-
-.stat-item {
-    text-align: center;
-    opacity: 0; /* Invizibil la început */
-    transform: translateY(30px);
-    animation: statReveal 1s cubic-bezier(0.2, 1, 0.3, 1) forwards;
-}
-
-/* Delay-uri pentru ca itemele să apară pe rând (Stânga -> Dreapta) */
-.stat-item:nth-child(1) { animation-delay: 0.2s; }
-.stat-item:nth-child(2) { animation-delay: 0.4s; }
-.stat-item:nth-child(3) { animation-delay: 0.6s; }
-
-.stat-number {
-    display: block;
-    font-family: 'Cinzel', serif;
-    font-size: clamp(3rem, 5vw, 4.5rem);
-    font-weight: 700;
-    color: #C5A47E;
-    margin-bottom: 10px;
-    letter-spacing: 2px;
-}
-
-.stat-label {
-    font-family: 'Montserrat', sans-serif;
-    text-transform: uppercase;
-    letter-spacing: 4px;
-    font-size: 0.75rem;
-    color: rgba(229, 217, 195, 0.4);
-}
-
-@keyframes statReveal {
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-/* Modificăm stat-item pentru a fi "pregătit" de animație */
-.stat-item {
-    text-align: center;
-    opacity: 0; 
-    transform: translateY(30px);
-    transition: all 1s cubic-bezier(0.2, 1, 0.3, 1);
-}
-
-/* Clasa pe care o va adăuga JavaScript-ul */
-.stat-item.visible {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-/* Delay-uri pentru apariție succesivă */
-.stat-item.visible:nth-child(1) { transition-delay: 0.2s; }
-.stat-item.visible:nth-child(2) { transition-delay: 0.4s; }
-.stat-item.visible:nth-child(3) { transition-delay: 0.6s; }
-
-
-
-
-
-}
-/* =========================================
-   FORMULAR CONTACT
-   ========================================= */
-.contact-form {
-    max-width: 600px;
-    margin: 50px auto;
-    padding: 0 20px;
-}
-
-.contact-form input, 
-.contact-form textarea {
-    width: 100%;
-    padding: 15px;
-    margin-bottom: 20px;
-    border: 1px solid var(--gri-deschis);
-    background: var(--alb-pur);
-    font-size: 1rem;
-}
-
-.btn-trimite {
-    background-color: var(--gri-inchis);
-    color: var(--alb-pur);
-    padding: 15px 40px;
-    border: none;
-    text-transform: uppercase;
-    font-weight: bold;
-    cursor: pointer;
-    transition: opacity 0.3s;
-}
-
-.btn-trimite:hover {
-    opacity: 0.9;
-}
-
-
-
-
-/* --- PAGINA CONTACT PREMIUM --- */
-
-:root {
-    --bg-black: #050505;
-    --alb-murdar: #E5D9C3;
-    --text-muted: rgba(229, 217, 195, 0.6);
-}
-
-body {
-    background-color: var(--bg-black);
-    color: var(--alb-murdar);
-}
-
-.contact-premium {
-    padding: 120px 8% 80px;
-}
-
-/* Intro */
-.contact-intro {
-    text-align: center;
-    margin-bottom: 80px;
-}
-
-.contact-intro h1 {
-    font-family: 'Cinzel', serif;
-    font-size: 3rem;
-    letter-spacing: 5px;
-    margin-bottom: 20px;
-    text-transform: uppercase;
-}
-
-.contact-intro p {
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 300;
-    opacity: 0.7;
-    max-width: 600px;
-    margin: 0 auto;
-}
-
-/* Grid Layout */
-.contact-grid {
-    display: grid;
-    grid-template-columns: 1fr 1.5fr;
-    gap: 100px;
-}
-
-/* Detalii Stânga (Asid) */
-.contact-details .info-block {
-    margin-bottom: 40px;
-}
-
-.info-block span {
-    font-family: 'Cinzel', serif;
-    font-size: 0.8rem;
-    color: var(--text-muted);
-    display: block;
-    margin-bottom: 10px;
-}
-
-.info-block h3 {
-    font-family: 'Cinzel', serif;
-    font-size: 1.2rem;
-    letter-spacing: 2px;
-    margin-bottom: 15px;
-}
-
-.info-block p {
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 300;
-    line-height: 1.6;
-    opacity: 0.8;
-}
-
-.contact-quote {
-    margin-top: 60px;
-    font-family: 'Cinzel', serif;
-    font-style: italic;
-    font-size: 1.1rem;
-    border-left: 1px solid var(--alb-murdar);
-    padding-left: 20px;
-    opacity: 0.5;
-}
-
-
-
-
-
-
-
-
-
-/* --- FORMULAR VINTAGEMOB REPARAT COMPLET --- */
-
-.form-wrapper {
-    background: #0a0a0a !important; /* Fundal închis */
-    padding: 40px !important;
-    border: 1px solid rgba(229, 217, 195, 0.1) !important;
-    width: 100%;
-    box-sizing: border-box;
-}
-
-.modern-form {
-    display: flex;
-    flex-direction: column;
-    gap: 25px;
-}
-
-/* Alinierea pe două coloane */
-.input-row {
-    display: grid !important;
-    grid-template-columns: 1fr 1fr !important; /* Două coloane egale */
-    gap: 30px !important;
-}
-
-.input-group {
-    display: flex;
-    flex-direction: column;
-}
-
-.input-group label {
-    font-family: 'Cinzel', serif !important;
-    font-size: 0.75rem !important;
-    color: #E5D9C3 !important; /* Alb murdar vizibil */
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    margin-bottom: 10px;
-    display: block;
-}
-
-/* Stil pentru Input, Select și Textarea */
-.input-group input, 
-.input-group select, 
-.input-group textarea {
-    background: transparent !important;
-    border: none !important;
-    border-bottom: 1px solid rgba(229, 217, 195, 0.3) !important;
-    color: #FFFFFF !important; /* Scrisul clientului e alb pur */
-    padding: 12px 0 !important;
-    font-family: 'Montserrat', sans-serif !important;
-    font-size: 1rem !important;
-    outline: none !important;
-    width: 100%;
-}
-
-.input-group input:focus, 
-.input-group select:focus, 
-.input-group textarea:focus {
-    border-bottom-color: #E5D9C3 !important;
-}
-
-/* Ajustare Select pentru a fi lizibil */
-.input-group select option {
-    background-color: #0a0a0a;
-    color: #E5D9C3;
-}
-
-/* Butonul Premium */
-.btn-premium {
-    background-color: #E5D9C3 !important;
-    color: #050505 !important;
-    border: none !important;
-    padding: 20px !important;
-    font-family: 'Cinzel', serif !important;
-    font-weight: 700 !important;
-    letter-spacing: 4px !important;
-    text-transform: uppercase !important;
-    cursor: pointer !important;
-    transition: 0.4s !important;
-    margin-top: 20px;
-}
-
-.btn-premium:hover {
-    background-color: #FFFFFF !important;
-    letter-spacing: 6px !important;
-}
-
-/* Placeholders mai vizibili */
-::placeholder {
-    color: rgba(229, 217, 195, 0.4) !important;
-}
-
-/* Mobile Fix */
-@media (max-width: 768px) {
-    .input-row {
-        grid-template-columns: 1fr !important; /* O singură coloană pe telefon */
-        gap: 20px !important;
-    }
-}
-
-
-/* --- STILIZARE LISTĂ ASCUNSĂ (SELECT) --- */
-
-.input-group select {
-    background-color: transparent !important;
-    color: #E5D9C3 !important; /* Culoarea textului principal */
-    cursor: pointer !important;
-    appearance: none !important; /* Scoate săgeata default a browserului */
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    padding-right: 30px !important; /* Spațiu pentru noua săgeată */
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%23E5D9C3' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E") !important;
-    background-repeat: no-repeat !important;
-    background-position: right 10px center !important;
-}
-
-/* Stil pentru opțiunile care apar când dai click */
-.input-group select option {
-    background-color: #0d0d0d !important; /* Fundalul listei când e deschisă */
-    color: #E5D9C3 !important;
-    padding: 15px !important;
-    font-family: 'Montserrat', sans-serif !important;
-}
-
-/* Hover pe opțiuni (funcționează în funcție de browser) */
-.input-group select option:hover {
-    background-color: #1a1a1a !important;
-}
-
-/* Reparăm linia de jos să fie activă și la select */
-.input-group select:focus {
-    border-bottom-color: #E5D9C3 !important;
-}
-
-
-
-
-
-
-
-
-
-
-/* --- PORTFOLIO V3: MUZEAL & CINEMATIC --- */
-
-.portfolio-v3 {
-    background-color: #050505;
-    color: #E5D9C3;
-}
-
-/* 1. HERO SECTION */
-.p-hero {
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    background: radial-gradient(circle at center, #0a0a0a 0%, #050505 100%);
-}
-
-.p-reveal-tag {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 0.65rem;
-    text-transform: uppercase;
-    letter-spacing: 6px;
-    color: #C5A47E;
-    display: block;
-    margin-bottom: 30px;
-}
-
-.p-main-title {
-    font-family: 'Cinzel', serif;
-    font-size: clamp(2.5rem, 8vw, 5.5rem);
-    font-weight: 400;
-    line-height: 1.1;
-    margin-bottom: 40px;
-}
-
-.p-main-title em {
-    font-family: 'Playfair Display', serif; /* Dacă îl ai, altfel va lua default serif italic */
-    font-style: italic;
-    color: #C5A47E;
-}
-
-.p-scroll-indicator {
-    margin-top: 50px;
-    display: flex;
-    justify-content: center;
-}
-
-.p-line {
-    width: 1px;
-    height: 80px;
-    background: linear-gradient(to bottom, #C5A47E, transparent);
-}
-
-/* 2. DUAL DISPLAY (DIPTIC) */
-.p-project-entry {
-    padding: 150px 0;
-}
-
-.p-diptic {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 30px;
-    padding: 0 5%;
-    height: 85vh;
-}
-
-.p-frame {
-    position: relative;
-    overflow: hidden;
-    background: #111;
-}
-
-.p-frame img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    opacity: 0.8;
-    transition: all 1.8s cubic-bezier(0.19, 1, 0.22, 1);
-}
-
-.p-frame:hover img {
-    opacity: 1;
-    transform: scale(1.05);
-}
-
-.p-meta-tag {
-    position: absolute;
-    bottom: 30px;
-    left: 30px;
-    font-family: 'Montserrat', sans-serif;
-    font-size: 0.6rem;
-    letter-spacing: 3px;
-    text-transform: uppercase;
-    background: rgba(0,0,0,0.7);
-    padding: 10px 20px;
-    border: 1px solid rgba(197, 164, 126, 0.2);
-}
-
-/* 3. DESCRIPTION GRID */
-.p-description-grid {
-    padding: 60px 5% 0;
-    display: grid;
-    grid-template-columns: 0.5fr 1.5fr;
-    align-items: flex-start;
-}
-
-.p-description-grid.central {
-    grid-template-columns: 1fr;
-    text-align: center;
-    max-width: 800px;
-    margin: 0 auto;
-}
-
-.p-number {
-    font-family: 'Cinzel', serif;
-    font-size: 5rem;
-    color: rgba(197, 164, 126, 0.1);
-    line-height: 1;
-}
-
-.p-info h2 {
-    font-family: 'Cinzel', serif;
-    font-size: 2.2rem;
-    color: #E5D9C3;
-    margin-bottom: 20px;
-}
-
-.p-info p {
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 300;
-    line-height: 1.8;
-    color: rgba(229, 217, 195, 0.7);
-    max-width: 600px;
-}
-
-.p-link-luxury {
-    display: inline-block;
-    margin-top: 30px;
-    font-family: 'Montserrat', sans-serif;
-    font-size: 0.75rem;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    color: #C5A47E;
-    text-decoration: none;
-    border-bottom: 1px solid rgba(197, 164, 126, 0.3);
-    padding-bottom: 5px;
-    transition: 0.4s;
-}
-
-.p-link-luxury:hover {
-    color: #fff;
-    border-color: #fff;
-    padding-right: 15px;
-}
-
-/* 4. CAROUSEL SHOWCASE */
-.p-gallery-showcase {
-    padding: 150px 0;
-    background-color: #080808;
-}
-
-.p-gallery-header {
-    text-align: center;
-    margin-bottom: 80px;
-}
-
-.p-carousel {
-    position: relative;
-    width: 100%;
-    height: 80vh;
-    display: flex;
-    align-items: center;
-}
-
-.p-track-container {
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
-}
-
-.p-track {
-    display: flex;
-    height: 100%;
-    transition: transform 1.2s cubic-bezier(0.77, 0, 0.175, 1);
-}
-
-/* --- REGULA PENTRU TOATE SLIDE-URILE --- */
-.p-slide {
-    min-width: 100%;
-    height: 85vh; /* Înălțime constantă */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: #050505;
-    overflow: hidden;
-}
-
-/* --- PRIMA POZĂ: FULL WIDTH (STÂNGA-DREAPTA) --- */
-.p-slide:first-child img {
-    width: 100% !important;
-    height: 100% !important;
-    object-fit: cover !important; /* Aceasta se va întinde pe tot ecranul */
-    filter: brightness(0.8); /* Puțin mai întunecată pentru aspect dramatic */
-}
-
-/* --- RESTUL POZELOR: REZOLUȚIE COMPLETĂ (FĂRĂ TĂIERE) --- */
-.p-slide:not(:first-child) img {
-    max-width: 95%; /* Lăsăm puțin spațiu la margini pentru eleganță */
-    max-height: 90%;
-    width: auto !important;
-    height: auto !important;
-    object-fit: contain !important; /* Aici vedem toată poza, chiar dacă e portret */
-    box-shadow: 0 30px 60px rgba(0,0,0,0.8);
-}
-
-/* Stil pentru butoanele de navigare ca să nu acopere pozele */
-.p-nav {
-    z-index: 100;
-    background: rgba(0,0,0,0.2);
-    border-radius: 50%;
-    width: 60px;
-    height: 60px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: 0.3s;
-}
-
-.p-nav:hover {
-    background: rgba(197, 164, 126, 0.8);
-    color: #050505;
-}
-
-.p-nav {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background: transparent;
-    border: none;
-    color: #C5A47E;
-    font-size: 3rem;
-    cursor: pointer;
-    z-index: 10;
-    transition: 0.4s;
-    opacity: 0.5;
-}
-
-.p-nav:hover {
-    opacity: 1;
-    color: #fff;
-}
-
-.p-prev { left: 40px; }
-.p-next { right: 40px; }
-
-/* 5. FINAL CTA */
-.p-final-cta {
-    padding: 180px 5%;
-    text-align: center;
-    border-top: 1px solid rgba(197, 164, 126, 0.1);
-}
-
-.p-cta-inner h2 {
-    font-family: 'Cinzel', serif;
-    font-size: 2.5rem;
-    margin-bottom: 15px;
-}
-
-.p-cta-inner p {
-    font-family: 'Montserrat', sans-serif;
-    margin-bottom: 40px;
-    opacity: 0.6;
-}
-
-.p-btn-gold {
-    display: inline-block;
-    padding: 22px 55px;
-    background-color: #C5A47E;
-    color: #050505;
-    font-family: 'Cinzel', serif;
-    font-weight: 700;
-    text-decoration: none;
-    text-transform: uppercase;
-    letter-spacing: 4px;
-    transition: 0.5s;
-}
-
-.p-btn-gold:hover {
-    background-color: #fff;
-    letter-spacing: 6px;
-    transform: translateY(-5px);
-}
-
-/* RESPONSIVE */
-@media (max-width: 900px) {
-    .p-diptic {
-        grid-template-columns: 1fr;
-        height: auto;
-    }
-    .p-frame { height: 50vh; }
-    .p-description-grid { grid-template-columns: 1fr; }
-    .p-carousel { height: 50vh; }
-    .p-nav { font-size: 2rem; }
-    .p-prev { left: 10px; }
-    .p-next { right: 10px; }
-}
-
-
-
-/* --- SECTION VIDEO FULL WIDTH --- */
-.p-video-full {
-    width: 100%;
-    overflow: hidden;
-    background-color: #050505;
-}
-
-.p-video-wrapper-full {
-    position: relative;
-    width: 100%;
-    height: 80vh; /* Ocupă 80% din înălțimea ecranului */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.v-content-full {
-    position: absolute;
-    top: 0;
-    left: -12%; /* Păstrăm crop-ul de 12% pe margini */
-    width: 124%; 
-    height: 100%;
-    object-fit: cover;
-    filter: brightness(0.4) contrast(1.1); /* Întunecăm pentru a scoate textul în evidență */
-}
-
-/* Containerul pentru derularea textului */
-.v-scrolling-overlay {
-    position: relative;
-    z-index: 10;
-    width: 100%;
-    overflow: hidden;
-}
-
-.v-scroll-container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    white-space: nowrap;
-    animation: slowScroll 15s linear infinite; /* Mișcare foarte lentă și fluidă */
-}
-
-.v-scroll-phrase {
-    font-family: 'Cinzel', serif !important;
-    font-size: clamp(2rem, 8vw, 6rem) !important;
-    color: #E5D9C3;
-    letter-spacing: 20px;
-    text-transform: uppercase;
-    margin: 0 50px;
-    opacity: 0.8;
-}
-
-/* Linia elegantă între cele două concepte */
-.v-scroll-divider {
-    width: 150px;
-    height: 1px;
-    background: linear-gradient(90deg, transparent, #C5A47E, transparent);
-    margin: 0 30px;
-}
-
-/* ANIMAȚIA DE DERULARE LENTĂ */
-@keyframes slowScroll {
-    0% {
-        transform: translateX(50%);
-        opacity: 0;
-    }
-    10%, 90% {
-        opacity: 1;
-    }
-    100% {
-        transform: translateX(-50%);
-        opacity: 0;
-    }
-}
-
-/* Overlay gradient pe margini pentru un look soft */
-.p-video-wrapper-full::after, .p-video-wrapper-full::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    width: 15%;
-    height: 100%;
-    z-index: 11;
-    pointer-events: none;
-}
-
-.p-video-wrapper-full::before {
-    left: 0;
-    background: linear-gradient(90deg, #050505, transparent);
-}
-
-.p-video-wrapper-full::after {
-    right: 0;
-    background: linear-gradient(-90deg, #050505, transparent);
-}
-
-/* Mobile Adaptive */
-@media (max-width: 768px) {
-    .p-video-wrapper-full { height: 50vh; }
-    .v-scroll-phrase { letter-spacing: 8px; font-size: 2rem !important; }
-    .v-scroll-divider { width: 60px; }
-}
-
-
-
-
-
-/* --- FOOTER ULTIMATE EDITION --- */
-.cinematic-footer {
-    position: relative;
-    background-color: #050505;
-    padding: 120px 0 40px 0;
-    overflow: hidden;
-    border-top: 1px solid rgba(197, 164, 126, 0.1);
-}
-
-/* Textul uriaș de pe fundal */
-.footer-bg-text {
-    position: absolute;
-    bottom: -20px;
-    left: 50%;
-    transform: translateX(-50%);
-    font-family: 'Cinzel', serif;
-    font-size: 18vw;
-    font-weight: 900;
-    color: rgba(197, 164, 126, 0.03); /* Foarte discret */
-    white-space: nowrap;
-    pointer-events: none;
-    z-index: 0;
-}
-
-.footer-container {
-    max-width: 1400px;
-    margin: 0 auto;
-    padding: 0 50px;
-    position: relative;
-    z-index: 1;
-}
-
-.footer-grid {
-    display: grid;
-    grid-template-columns: 1.5fr 1fr 1fr 1.2fr;
-    gap: 60px;
-    margin-bottom: 80px;
-}
-
-/* Stil Logo în Footer */
-.brand-col .logo-classic {
-    font-size: 3rem;
-    margin-bottom: 25px;
-    display: inline-block;
-}
-
-.brand-desc {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 0.9rem;
-    line-height: 1.8;
-    color: rgba(229, 217, 195, 0.6);
-    max-width: 300px;
-}
-
-.footer-label {
-    display: block;
-    font-family: 'Montserrat', sans-serif;
-    font-size: 0.65rem;
-    text-transform: uppercase;
-    letter-spacing: 3px;
-    color: #C5A47E;
-    margin-bottom: 30px;
-}
-
-.footer-links {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-}
-
-.footer-links a {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 0.85rem;
-    color: rgba(229, 217, 195, 0.4);
-    text-decoration: none;
-    transition: 0.4s;
-}
-
-.footer-links a:hover {
-    color: #E5D9C3;
-    transform: translateX(5px);
-}
-
-/* Coloana de Status/Contact */
-.availability {
-    font-family: 'Cinzel', serif;
-    font-size: 0.8rem;
-    color: #E5D9C3;
-    margin-bottom: 10px;
-    letter-spacing: 1px;
-}
-
-.footer-cta-email {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 1rem;
-    color: #FFFFFF;
-    text-decoration: none;
-    border-bottom: 1px solid rgba(197, 164, 126, 0.3);
-    padding-bottom: 5px;
-    transition: 0.4s;
-}
-
-.footer-cta-email:hover {
-    border-bottom-color: #C5A47E;
-}
-
-/* Bara finală de jos */
-.footer-bottom {
-    border-top: 1px solid rgba(229, 217, 195, 0.05);
-    padding-top: 40px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.footer-legal {
-    display: flex;
-    align-items: center;
-    gap: 20px;
-    font-family: 'Montserrat', sans-serif;
-    font-size: 0.65rem;
-    letter-spacing: 1px;
-    color: rgba(229, 217, 195, 0.3);
-}
-
-.legal-dots {
-    width: 4px;
-    height: 4px;
-    background: #C5A47E;
-    border-radius: 50%;
-}
-
-.back-to-top a {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 0.7rem;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    color: #C5A47E;
-    text-decoration: none;
-    transition: 0.4s;
-}
-
-.back-to-top a:hover {
-    letter-spacing: 4px;
-    color: #fff;
-}
-
-/* Mobile */
-@media (max-width: 1024px) {
-    .footer-grid { grid-template-columns: 1fr 1fr; }
-}
-
-@media (max-width: 600px) {
-    .footer-grid { grid-template-columns: 1fr; }
-    .footer-bottom { flex-direction: column; gap: 20px; text-align: center; }
-}
-
-
-
-
-
-
-
-
-/* --- RESPONSIVE OPTIMIZATION --- */
-@media (max-width: 992px) {
-    .project-story {
-        flex-direction: column !important; /* Toate devin coloane pe mobil */
-        min-height: auto;
-        padding: 80px 5%;
-    }
-    .project-image-parallax {
-        height: 50vh;
-        margin-bottom: 40px;
-    }
-    .project-content {
-        text-align: left !important; /* Toate textele aliniate la stânga pe mobil */
-    }
-    .project-number {
-        top: -10px;
-        font-size: 3rem;
-    }
-    .hero-portfolio-intro h1 {
-        font-size: clamp(3rem, 7vw, 5rem);
-    }
-    .lead-text {
-        font-size: 1.1rem;
-    }
-}
-
-@media (max-width: 576px) {
-    .hero-portfolio-intro h1 {
-        font-size: clamp(2.5rem, 6vw, 4rem);
-    }
-    .project-content h2 {
-        font-size: 2rem;
-    }
-    .cta-final h1 {
-        font-size: clamp(2rem, 5vw, 3.5rem);
-    }
-}
-
-/* Set background-image for parallax dynamically via CSS attribute */
-.project-image-parallax[data-img="proiect1.jpg"] { background-image: url('proiect1.jpg'); }
-.project-image-parallax[data-img="proiect2.jpg"] { background-image: url('proiect2.jpg'); }
-.project-image-parallax[data-img="proiect3.jpg"] { background-image: url('proiect3.jpg'); }
-.project-image-parallax[data-img="proiect4.jpg"] { background-image: url('proiect4.jpg'); }
-/* Adaugă aici și alte poze necesare */
-.hero-portfolio-intro { background-image: url('hero-portofoliu.jpg'); } /* Imaginea de intro */
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* =========================================
-   1. VARIABILE, RESETARE & FONTURI
-   ========================================= */
-:root {
-    --gold: #c2a063; /* Auriu Vintage */
-    --dark: #121212; /* Negru Intens */
-    --dark-soft: #1a1a1a; /* Gri Foarte Închis */
-    --light: #ffffff; /* Alb Pur */
-    --grey-text: #a0a0a0; /* Gri pentru Text Secundar */
-    --border-dark: #333; /* Culoare borduri și separatoare */
-}
-
-/* Resetare și Fonturi */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Inter', sans-serif; /* Font modern pentru corpul textului */
-}
-
-body {
     background-color: var(--dark);
     color: var(--light);
     line-height: 1.6;
-    overflow-x: hidden; /* Previne scroll-ul orizontal nedorit */
+    overflow-x: hidden;
 }
-
-
-
-/* =========================================
-   3. HERO SECTION (IMAGINE DE FUNDAL SPECTACULOASĂ)
-   ========================================= */
-.hero-premium {
-    width: 100%;
-    height: 95vh; /* Aproape tot ecranul pentru impact */
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    
-    /* Imagine de fundal spectaculoasă - o bancă de lucru vintage */
-    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.8)), 
-                url('gm.jpg') no-repeat center center/cover;
-    
-    background-attachment: fixed; /* Efect de Parallax */
-    position: relative;
-    overflow: hidden; /* Pentru a ascunde orice depășire a imaginii */
-}
-
-.hero-premium h1 {
-    font-family: 'Playfair Display', serif; /* Font elegant pentru titlu */
-    font-size: clamp(3.5rem, 8vw, 6rem); /* Titlu mare, responsiv */
-    color: var(--light);
-    text-transform: uppercase;
-    letter-spacing: 5px;
-    margin-bottom: 25px;
-    text-shadow: 0px 4px 10px rgba(0,0,0,0.6); /* Umbră subtilă pentru lizibilitate */
-}
-
-.hero-premium p {
-    color: var(--gold);
-    font-size: clamp(1.1rem, 2.5vw, 1.6rem);
-    letter-spacing: 4px;
-    text-transform: uppercase;
-    margin-bottom: 40px;
-    font-weight: 300;
-}
-
-.btn-primary {
-    display: inline-block;
-    padding: 18px 40px;
-    background-color: var(--gold);
-    color: var(--dark);
-    text-decoration: none;
-    text-transform: uppercase;
-    font-weight: 700;
-    font-size: 1rem;
-    letter-spacing: 2px;
-    border: none;
-    border-radius: 3px;
-    transition: all 0.3s ease;
-    box-shadow: 0px 5px 15px rgba(0,0,0,0.3);
-}
-
-.btn-primary:hover {
-    background-color: var(--light);
-    color: var(--dark);
-    transform: translateY(-3px);
-    box-shadow: 0px 8px 20px rgba(0,0,0,0.4);
-}
-/* =========================================
-   4. RÂNDURI ZIG-ZAG (PROIECTE)
-   ========================================= */
-.rand {
-    display: flex;
-    align-items: center;
-    padding: 100px 10%;
-    gap: 80px;
-}
-
-.rand.invers {
-    flex-direction: row-reverse;
-    background-color: #1a1a1a; /* Gri foarte inchis pentru contrast */
-}
-
-.poza {
-    flex: 1.2;
-    overflow: hidden;
-}
-
-.poza img {
-    width: 100%;
-    display: block;
-    border: 1px solid #333;
-    transition: transform 0.6s cubic-bezier(0.2, 1, 0.3, 1);
-}
-
-.poza:hover img {
-    transform: scale(1.05);
-}
-
-.text-box {
-    flex: 1;
-}
-
-.text-box h3 {
-    font-family: 'Playfair Display', serif;
-    font-size: 2.2rem;
-    color: #c2a063;
-    margin-bottom: 20px;
-}
-
-.text-box p {
-    color: #a0a0a0;
-    font-size: 1.1rem;
-    max-width: 500px;
-}
-
-/* =========================================
-   5. STATISTICI (CIFRE)
-   ========================================= */
-.stats-section {
-    display: flex;
-    justify-content: space-around;
-    padding: 120px 10%;
-    background-color: #000000;
-    text-align: center;
-    border-top: 1px solid #222;
-}
-
-.stat-number {
-    display: block;
-    font-size: 4rem;
-    font-family: 'Playfair Display', serif;
-    font-weight: bold;
-    color: #c2a063;
-    margin-bottom: 10px;
-}
-
-.stat-label {
-    text-transform: uppercase;
-    letter-spacing: 3px;
-    font-size: 0.8rem;
-    color: #666;
-}
-
-/* =========================================
-   6. FOOTER PREMIUM EXTINS
-   ========================================= */
-/* --- FOOTER FINAL LIGA SUPERIOARĂ --- */
-.cinematic-footer {
-    position: relative;
-    background-color: #050505;
-    padding: 120px 0 40px 0;
-    overflow: hidden;
-    border-top: 1px solid rgba(197, 164, 126, 0.1);
-}
-
-.footer-bg-text {
-    position: absolute;
-    bottom: -20px;
-    left: 50%;
-    transform: translateX(-50%);
-    font-family: 'Cinzel', serif;
-    font-size: 16vw;
-    font-weight: 900;
-    color: rgba(197, 164, 126, 0.02);
-    white-space: nowrap;
-    pointer-events: none;
-    z-index: 0;
-}
-
-.footer-container {
-    max-width: 1400px;
-    margin: 0 auto;
-    padding: 0 50px;
-    position: relative;
-    z-index: 1;
-}
-
-/* Setăm Grid-ul pe 4 coloane */
-.footer-grid {
-    display: grid;
-    grid-template-columns: 1.5fr 0.8fr 1fr 1fr;
-    gap: 50px;
-    margin-bottom: 80px;
-}
-
-.footer-label {
-    display: block;
-    font-family: 'Montserrat', sans-serif;
-    font-size: 0.65rem;
-    text-transform: uppercase;
-    letter-spacing: 3px;
-    color: #C5A47E;
-    margin-bottom: 30px;
-}
-
-/* Stiluri Text Static (Valori/Atelier) */
-.footer-static-text {
-    font-family: 'Cinzel', serif;
-    font-size: 0.8rem;
-    color: rgba(229, 217, 195, 0.6);
-    margin-bottom: 12px;
-    letter-spacing: 1px;
-}
-
-.footer-links a {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 0.85rem;
-    color: rgba(229, 217, 195, 0.4);
-    text-decoration: none;
-    display: block;
-    margin-bottom: 12px;
-    transition: 0.4s ease;
-}
-
-.footer-links a:hover {
-    color: #E5D9C3;
-    transform: translateX(5px);
-}
-
-.footer-cta-email {
-    font-family: 'Montserrat', sans-serif;
-    color: #FFFFFF !important;
-    border-bottom: 1px solid rgba(197, 164, 126, 0.3);
-    padding-bottom: 3px;
-    display: inline-block !important;
-}
-
-/* Copyright Bar */
-.footer-bottom {
-    border-top: 1px solid rgba(229, 217, 195, 0.05);
-    padding-top: 40px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.footer-legal {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 0.6rem;
-    letter-spacing: 2px;
-    color: rgba(229, 217, 195, 0.3);
-    display: flex;
-    align-items: center;
-    gap: 15px;
-}
-
-.legal-dots {
-    width: 3px;
-    height: 3px;
-    background: #C5A47E;
-    border-radius: 50%;
-}
-
-.back-to-top a {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 0.7rem;
-    text-transform: uppercase;
-    color: #C5A47E;
-    text-decoration: none;
-    letter-spacing: 2px;
-}
-
-/* Mobile */
-@media (max-width: 1024px) {
-    .footer-grid { grid-template-columns: 1fr 1fr; gap: 40px; }
-    .footer-bg-text { font-size: 25vw; }
-}
-
-
-/* =========================================
-   7. RESPONSIVE (MOBIL)
-   ========================================= */
-@media (max-width: 992px) {
-    .navbar {
-        height: auto;
-        padding: 25px;
-        flex-direction: column;
-        gap: 20px;
-    }
-    
-    .nav-links li {
-        margin: 0 15px;
-    }
-
-    .hero h1 {
-        font-size: 3rem;
-    }
-
-    .rand {
-        flex-direction: column !important;
-        text-align: center;
-        padding: 60px 5%;
-        gap: 40px;
-    }
-
-    .footer-main {
-        grid-template-columns: 1fr;
-        gap: 50px;
-        text-align: center;
-    }
-
-    .footer-brand p {
-        margin: 20px auto;
-    }
-}
-
-
-
-
-
-
-
-
-
-
-
-/* Ajustări specifice pentru textul de poveste */
-.text-box p {
-    margin-bottom: 20px; /* Spațiu între paragrafe */
-    text-align: justify; /* Aliniere curată a textului */
-}
-
-.text-box strong {
-    color: #c2a063; /* Cuvintele evidențiate devin aurii */
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* Containerul mutat în stânga jos */
-.wa-container {
-    position: fixed;
-    bottom: 40px;
-    left: 40px; /* Mutat de la right la left */
-    z-index: 9999;
-}
-
-.wa-link {
-    display: flex;
-    flex-direction: row-reverse; /* Inversăm ordinea: Iconița rămâne la ancoră, textul apare în dreapta ei */
-    align-items: center;
-    text-decoration: none;
-    gap: 15px;
-}
-
-/* Textul care apare discret dinspre stânga */
-.wa-text {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 0.7rem;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    color: #C5A47E;
-    opacity: 0;
-    transform: translateX(-20px); /* Glisează dinspre stânga (negativ) */
-    transition: all 0.6s cubic-bezier(0.22, 1, 0.36, 1);
-    pointer-events: none; /* Previne activarea accidentală dacă mouse-ul e doar în zonă */
-}
-
-.wa-link:hover .wa-text {
-    opacity: 1;
-    transform: translateX(0);
-}
-
-/* --- RESTUL CODULUI (Iconița și Pulse) RĂMÂNE NESCHIMBAT --- */
-.wa-icon-box {
-    width: 50px;
-    height: 50px;
-    background: #050505;
-    border: 1px solid rgba(197, 164, 126, 0.3);
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: all 0.5s ease;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
-    position: relative;
-    overflow: hidden;
-}
-
-.wa-svg {
-    width: 20px;
-    fill: #C5A47E;
-    transition: all 0.5s ease;
-}
-
-.wa-icon-box::after {
-    content: '';
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    border-radius: 50%;
-    border: 1px solid #C5A47E;
-    animation: wa-pulse 3s infinite;
-}
-
-@keyframes wa-pulse {
-    0% { transform: scale(1); opacity: 0.5; }
-    100% { transform: scale(1.5); opacity: 0; }
-}
-
-.wa-link:hover .wa-icon-box {
-    background: #C5A47E;
-    border-color: #C5A47E;
-}
-
-.wa-link:hover .wa-svg {
-    fill: #050505;
-    transform: scale(1.1);
-}
-
-
-
-
-
-
-
 
 /* ============================================================
-   PAGINA DESPRE: CINEMATIC & MODERN (OVERRIDE ACTIV)
-   ============================================================ */
+HEADER SUPREME V4 - ARCHITECTURAL DESIGN (COMPLET)
+============================================================ */
 
-/* Reset special pentru a anula stilurile vechi de pe alte pagini */
-.about-cinematic .rand, 
-.about-cinematic .text-box, 
-.about-cinematic .poza {
-    background-color: transparent !important;
-    padding: 0 !important;
-    margin: 0 !important;
-    border: none !important;
-    gap: 0 !important;
-    display: block !important; /* Anulează flex-ul vechi dacă e cazul */
-}
-
-.about-cinematic {
-    background-color: #050505 !important;
-    color: #E5D9C3 !important;
-    font-family: 'Montserrat', sans-serif;
-}
-
-/* Hero Section Modern */
-.about-hero {
-    height: 75vh;
-    background: linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.65)), url('atelier.jpg') no-repeat center center/cover;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    position: relative;
-    border-bottom: 1px solid rgba(197, 164, 126, 0.1);
-    margin-top: 0 !important; /* Asigură că lipsește spațiul sub header */
-}
-
-.hero-content-modern h1 {
-    font-family: 'Cinzel', serif !important;
-    font-size: clamp(2.5rem, 6vw, 4.5rem);
-    font-weight: 400;
-    line-height: 1.1;
-    color: #E5D9C3;
-    margin: 0;
-}
-
-.hero-content-modern h1 em {
-    font-style: italic;
-    color: #C5A47E;
-}
-
-.hero-line {
-    width: 60px;
-    height: 1px;
-    background-color: #C5A47E;
-    margin: 35px auto 0;
-}
-
-/* Grid-ul Introductiv - Anulează complet vechiul .rand */
-.about-intro-grid {
-    padding: 140px 8% !important;
-    display: grid !important;
-    grid-template-columns: 1fr 1fr !important;
-    gap: 100px !important;
-    align-items: center !important;
-    background: transparent !important;
-}
-
-.intro-image-box {
-    position: relative;
-    line-height: 0;
-}
-
-.intro-image-box img {
-    width: 100%;
-    filter: grayscale(20%);
-    border: 1px solid rgba(197, 164, 126, 0.2) !important;
-    transform: none !important; /* Anulează orice hover vechi */
-}
-
-.image-accent {
-    position: absolute;
-    top: -20px;
-    right: -20px;
-    width: 100px;
-    height: 100px;
-    border-top: 2px solid #C5A47E !important;
-    border-right: 2px solid #C5A47E !important;
-    z-index: 1;
-}
-
-.section-label {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 0.75rem;
-    text-transform: uppercase;
-    letter-spacing: 5px;
-    color: #C5A47E;
-    display: block;
-    margin-bottom: 25px;
-}
-
-.intro-text-box h2 {
-    font-family: 'Cinzel', serif !important;
-    font-size: 2.8rem;
-    margin-bottom: 30px;
-    color: #E5D9C3;
-    border: none !important; /* Anulează bordura veche de la h3-ul din .text-box */
-    padding: 0 !important;
-}
-
-.intro-text-box p {
-    font-family: 'Montserrat', sans-serif !important;
-    line-height: 1.8 !important;
-    margin-bottom: 25px !important;
-    color: rgba(229, 217, 195, 0.75) !important;
-    text-align: left !important; /* Anulează justify-ul vechi */
-}
-
-/* Pilonii de activitate - Secțiune Curată */
-.piling-services {
-    padding: 120px 8%;
-    background-color: #0a0a0a !important;
-    border-top: 1px solid rgba(197, 164, 126, 0.05);
-}
-
-.services-container {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 70px;
-    max-width: 1400px;
-    margin: 0 auto;
-}
-
-.service-block {
-    position: relative;
-    padding-top: 50px;
-}
-
-.service-block .p-number {
-    font-family: 'Cinzel', serif !important;
-    font-size: 3.5rem !important;
-    color: rgba(197, 164, 126, 0.08) !important;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 0;
-}
-
-.service-block h3 {
-    font-family: 'Cinzel', serif !important;
-    font-size: 1.3rem !important;
-    color: #C5A47E !important;
-    margin-bottom: 20px !important;
-    position: relative;
-    z-index: 1;
-    border: none !important;
-}
-
-.service-block p {
-    font-family: 'Montserrat', sans-serif !important;
-    font-size: 0.95rem !important;
-    line-height: 1.7 !important;
-    color: rgba(229, 217, 195, 0.5) !important;
-}
-
-/* Promisiunea (CTA Final) */
-.about-promise {
-    padding: 160px 8%;
-    text-align: center;
-    background-color: #050505;
-}
-
-.promise-content h2 {
-    font-family: 'Cinzel', serif !important;
-    font-size: 3rem;
-    margin-bottom: 25px;
-    color: #E5D9C3;
-}
-
-.promise-content h2 em {
-    color: #C5A47E;
-    font-style: italic;
-}
-
-.promise-content p {
-    font-family: 'Montserrat', sans-serif;
-    max-width: 650px;
-    margin: 0 auto 50px;
-    opacity: 0.7;
-    font-size: 1.1rem;
-}
-
-.p-btn-gold {
-    display: inline-block;
-    padding: 22px 55px;
-    background-color: #C5A47E !important;
-    color: #050505 !important;
-    font-family: 'Cinzel', serif;
-    font-weight: 700;
-    text-decoration: none;
-    letter-spacing: 4px;
-    text-transform: uppercase;
-    transition: 0.5s ease;
-}
-
-.p-btn-gold:hover {
-    background-color: #FFFFFF !important;
-    letter-spacing: 6px;
-}
-
-/* Mobile Responsive - Hard Reset */
-@media (max-width: 1024px) {
-    .about-intro-grid { 
-        grid-template-columns: 1fr !important; 
-        gap: 60px !important; 
-        text-align: center !important; 
-        padding: 80px 5% !important;
-    }
-    .intro-text-box p { text-align: center !important; }
-    .services-container { grid-template-columns: 1fr !important; gap: 50px; }
-    .image-accent { display: none !important; }
-}
-
-
-
-
-
-
-
-
-
-
-
-
-/* ============================================================
-   HEADER SUPREME V4 - ARCHITECTURAL DESIGN
-   ============================================================ */
-
-/* Anulare Totală Stiluri Vechi pentru Header */
 header, .atelier-header, .header-premium, .navbar {
     display: none !important; /* Ascundem orice tentativă de header vechi */
 }
@@ -2014,6 +65,28 @@ header, .atelier-header, .header-premium, .navbar {
     align-items: center !important;
 }
 
+/* --- NAVIGAȚIE: MONTSERRAT --- */
+.v-nav {
+    display: flex !important;
+    gap: 35px !important;
+}
+
+.v-link {
+    font-family: 'Montserrat', sans-serif !important;
+    font-size: 0.7rem !important;
+    font-weight: 400 !important;
+    text-transform: uppercase !important;
+    letter-spacing: 3px !important;
+    color: rgba(229, 217, 195, 0.5) !important;
+    text-decoration: none !important;
+    transition: 0.4s ease !important;
+}
+
+.v-link:hover {
+    color: #C5A47E !important;
+    transform: translateY(-2px) !important;
+}
+
 /* --- LOGO: CENTRARE ABSOLUTĂ ȘI FONT CINZEL --- */
 .v-logo-box {
     display: flex !important;
@@ -2036,28 +109,6 @@ header, .atelier-header, .header-premium, .navbar {
     color: #E5D9C3 !important;
     letter-spacing: 12px !important;
     text-shadow: 0 0 30px rgba(197, 164, 126, 0.3) !important;
-}
-
-/* --- NAVIGAȚIE: MONTSERRAT --- */
-.v-nav {
-    display: flex !important;
-    gap: 35px !important;
-}
-
-.v-link {
-    font-family: 'Montserrat', sans-serif !important;
-    font-size: 0.7rem !important;
-    font-weight: 400 !important;
-    text-transform: uppercase !important;
-    letter-spacing: 3px !important;
-    color: rgba(229, 217, 195, 0.5) !important;
-    text-decoration: none !important;
-    transition: 0.4s ease !important;
-}
-
-.v-link:hover {
-    color: #C5A47E !important;
-    transform: translateY(-2px) !important;
 }
 
 /* --- CONTACT DREAPTA --- */
@@ -2109,45 +160,216 @@ header, .atelier-header, .header-premium, .navbar {
     100% { transform: translateY(0); opacity: 1; }
 }
 
-/* --- MOBILE --- */
+/* --- MOBILE HEADER --- */
 @media (max-width: 1024px) {
     .v-nav { display: none !important; }
     .v-header-container { grid-template-columns: 1fr 1fr !important; padding: 0 30px !important; }
     .v-logo { font-size: 2rem !important; }
 }
 
+/* =========================================
+   HERO SECTION - FIXATĂ ȘI CONFIGURATĂ REPETIȚIA PENTRU GM.JPG
+   ========================================= */
+.hero, .hero-premium {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    
+    /* REPARARE CONFLICT ȘI LEGĂTURĂ DIRECTĂ PENTRU IMAGINEA GM.JPG PENTRU CONSTANȚA */
+    background: linear-gradient(rgba(5, 5, 5, 0.7), rgba(5, 5, 5, 0.85)), 
+                url('gm.jpg') no-repeat center center/cover !important;
+    background-attachment: fixed !important;
+}
 
+.hero h1, .hero-premium h1 {
+    font-family: 'Cinzel', serif;
+    font-size: clamp(3rem, 8vw, 5.5rem);
+    color: #fdfaf5;
+    margin-bottom: 20px;
+    letter-spacing: 12px;
+    text-transform: uppercase;
+    font-weight: 700;
+    text-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
+    animation: fadeInDown 1.5s ease;
+}
 
+.hero p, .hero-premium p {
+    font-family: 'Montserrat', sans-serif;
+    font-size: clamp(1rem, 2.5vw, 1.4rem);
+    color: #C5A47E;
+    letter-spacing: 6px;
+    text-transform: uppercase;
+    font-weight: 300;
+    position: relative;
+    padding-top: 25px;
+    margin-bottom: 35px;
+    animation: fadeInUp 1.5s ease;
+}
 
+.hero p::before, .hero-premium p::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 1px;
+    background-color: #C5A47E;
+}
 
+/* CTA AUTOMAT PENTRU PRIMA PAGINĂ */
+.hero-cta, .btn-primary {
+    display: inline-block;
+    padding: 18px 45px;
+    background-color: #C5A47E;
+    color: #050505;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 0.85rem;
+    letter-spacing: 3px;
+    border: none;
+    border-radius: 0px;
+    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+    box-shadow: 0px 10px 30px rgba(0,0,0,0.4);
+    z-index: 5;
+}
 
+.hero-cta:hover, .btn-primary:hover {
+    background-color: #FFFFFF;
+    color: #050505;
+    transform: translateY(-4px);
+    box-shadow: 0px 15px 35px rgba(197, 164, 126, 0.25);
+    letter-spacing: 4px;
+}
 
+/* =========================================
+   RÂNDURI ZIG-ZAG (HOME REFINEMENT)
+   ========================================= */
+.proiecte-home {
+    background-color: #050505;
+    padding: 100px 0;
+}
 
+.rand {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 80px 10%;
+    gap: 80px;
+    min-height: 60vh;
+}
 
-.contact-link-active {
-    color: inherit; /* Ia culoarea textului din părinte (alb-crem) */
-    text-decoration: none; /* Scoate linia de sub text */
-    transition: color 0.3s ease;
+.rand.invers, .rand:nth-child(even) {
+    flex-direction: row-reverse;
+}
+
+.rand.invers {
+    background-color: #0a0a0a;
+}
+
+.poza {
+    flex: 1.2;
+    overflow: hidden;
+    line-height: 0;
+    border: 1px solid rgba(197, 164, 126, 0.1);
+}
+
+.poza img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 1.2s cubic-bezier(0.19, 1, 0.22, 1);
+    filter: grayscale(15%);
+}
+
+.poza:hover img {
+    transform: scale(1.04);
+    filter: grayscale(0%);
+}
+
+.text-box {
+    flex: 1;
+}
+
+.text-box h3 {
+    font-family: 'Cinzel', serif;
+    font-size: 2rem;
+    color: #E5D9C3;
+    margin-bottom: 25px;
+    border-bottom: 1px solid #C5A47E;
+    padding-bottom: 15px;
     display: inline-block;
 }
 
-.contact-link-active:hover {
-    color: #C5A47E; /* Se schimbă în auriul tău mat la hover */
+.text-box p {
+    font-family: 'Montserrat', sans-serif;
+    color: rgba(229, 217, 195, 0.6);
+    line-height: 1.8;
+    font-size: 1.05rem;
+    margin-bottom: 15px;
+    text-align: justify;
 }
 
+.text-box strong {
+    color: #C5A47E;
+}
 
+/* =========================================
+   ANIMATIE STATISTICI (REVEAL EFFECT)
+   ========================================= */
+.stats-section {
+    display: flex;
+    justify-content: space-around;
+    padding: 120px 10%;
+    background-color: #000000;
+    text-align: center;
+    border-top: 1px solid rgba(197, 164, 126, 0.1);
+}
 
+.stat-item {
+    text-align: center;
+    opacity: 0; 
+    transform: translateY(30px);
+    transition: all 1s cubic-bezier(0.2, 1, 0.3, 1);
+}
 
+.stat-item.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
 
+.stat-item.visible:nth-child(1) { transition-delay: 0.2s; }
+.stat-item.visible:nth-child(2) { transition-delay: 0.4s; }
+.stat-item.visible:nth-child(3) { transition-delay: 0.6s; }
 
+.stat-number {
+    display: block;
+    font-family: 'Cinzel', serif;
+    font-size: clamp(3rem, 5vw, 4.5rem);
+    font-weight: 700;
+    color: #C5A47E;
+    margin-bottom: 10px;
+    letter-spacing: 2px;
+}
 
+.stat-label {
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    font-size: 0.75rem;
+    color: rgba(229, 217, 195, 0.4);
+}
 
-
-
-
-
-
-/* --- TIMELINE SECTION STYLE --- */
+/* =========================================
+   TIMELINE SECTION STYLE
+   ========================================= */
 .v-timeline-section {
     padding: 120px 5%;
     background-color: #050505;
@@ -2173,7 +395,6 @@ header, .atelier-header, .header-premium, .navbar {
     position: relative;
 }
 
-/* Linia Verticală de pe Mijloc */
 .v-timeline-line {
     position: absolute;
     left: 50%;
@@ -2191,13 +412,12 @@ header, .atelier-header, .header-premium, .navbar {
     width: 100%;
     margin-bottom: 80px;
     position: relative;
-    opacity: 0; /* Pentru animație */
+    opacity: 0;
     transform: translateY(40px);
     transition: all 1s cubic-bezier(0.22, 1, 0.36, 1);
 }
 
-/* Clasa adăugată de JS la scroll */
-.v-step.show {
+.v-step.show, .v-step.visible {
     opacity: 1;
     transform: translateY(0);
 }
@@ -2233,7 +453,6 @@ header, .atelier-header, .header-premium, .navbar {
     line-height: 1.7;
 }
 
-/* Punctul auriu de pe linie */
 .v-step-dot {
     position: absolute;
     left: 50%;
@@ -2246,36 +465,14 @@ header, .atelier-header, .header-premium, .navbar {
     z-index: 2;
 }
 
-/* Aranjament Stânga/Dreapta */
 .item-left { flex-direction: row; }
 .item-right { flex-direction: row-reverse; }
-
 .item-left .v-step-content { text-align: right; }
 .item-right .v-step-content { text-align: left; }
 
-/* Mobile Adaptability */
-@media (max-width: 768px) {
-    .v-timeline-line { left: 20px; }
-    .v-step { flex-direction: row !important; margin-bottom: 50px; }
-    .v-step-content { width: calc(100% - 60px); text-align: left !important; margin-left: 40px; }
-    .v-step-dot { left: 20px; }
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* --- ANULARE ȘI RECONSTRUCȚIE SECȚIUNE CONCEPT --- */
-
-/* Forțăm fundalul și anulăm padding-ul vechi dacă există conflicte */
+/* =========================================
+   CONCEPT SECTION OVERRIDE
+   ========================================= */
 .v-concept-section.v-override {
     background-color: #050505 !important;
     padding: 160px 10% !important;
@@ -2283,28 +480,25 @@ header, .atelier-header, .header-premium, .navbar {
     border: none !important;
 }
 
-/* Badge-ul auriu de sus */
 .v-override .v-accent-badge {
     font-family: 'Montserrat', sans-serif !important;
     font-size: 0.65rem !important;
     text-transform: uppercase !important;
     letter-spacing: 6px !important;
-    color: #C5A47E !important; /* Auriul tău semnătură */
+    color: #C5A47E !important;
     margin-bottom: 35px !important;
     display: block !important;
 }
 
-/* Titlul principal */
 .v-override .v-concept-title {
     font-family: 'Cinzel', serif !important;
     font-size: clamp(2.2rem, 5vw, 3.8rem) !important;
-    color: #fdfaf5 !important; /* Un alb-crem foarte deschis pentru contrast pe negru */
+    color: #fdfaf5 !important;
     margin-bottom: 45px !important;
     letter-spacing: 2px !important;
     line-height: 1.2 !important;
 }
 
-/* Stilul pentru cuvântul cursiv */
 .v-override .v-concept-title em {
     font-family: 'Playfair Display', serif !important;
     font-style: italic !important;
@@ -2312,19 +506,17 @@ header, .atelier-header, .header-premium, .navbar {
     text-transform: lowercase !important;
 }
 
-/* Textul descriptiv - Anulăm gri-ul șters */
 .v-override .v-concept-content p {
     font-family: 'Montserrat', sans-serif !important;
     font-size: 1.15rem !important;
     line-height: 2.2 !important;
-    color: rgba(229, 217, 195, 0.75) !important; /* Alb perlat cu opacitate pentru look cinematic */
+    color: rgba(229, 217, 195, 0.75) !important;
     max-width: 850px !important;
     margin: 0 auto !important;
     font-weight: 300 !important;
     text-align: center !important;
 }
 
-/* Linia de jos */
 .v-override .v-minimal-line {
     width: 80px !important;
     height: 1px !important;
@@ -2333,24 +525,9 @@ header, .atelier-header, .header-premium, .navbar {
     opacity: 0.5 !important;
 }
 
-/* Anulăm orice alt stil de la containerele părinte care ar putea încurca */
-.v-concept-section * {
-    box-sizing: border-box !important;
-}
-
-
-
-
-
-
-
-
-
-
 /* =========================================
-   SECȚIUNE RECENZII - VINTAGEMOB (COMPLET)
+   SECȚIUNE RECENZII
    ========================================= */
-
 .v-reviews-section {
     padding: 120px 5%;
     background-color: #050505;
@@ -2360,41 +537,12 @@ header, .atelier-header, .header-premium, .navbar {
     border-top: 1px solid rgba(197, 164, 126, 0.05);
 }
 
-.v-reviews-container {
-    max-width: 1200px;
-    margin: 0 auto;
-}
+.v-reviews-container { max-width: 1200px; margin: 0 auto; }
+.v-rating-summary { margin-bottom: 60px; animation: fadeIn 1.5s ease; }
+.v-average-number { font-family: 'Cinzel', serif; font-size: 5rem; color: #C5A47E; line-height: 1; margin-bottom: 10px; }
+.v-average-stars { color: #C5A47E; font-size: 1.8rem; letter-spacing: 8px; margin-bottom: 15px; }
+.v-total-count { font-family: 'Montserrat', sans-serif; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 3px; color: rgba(229, 217, 195, 0.4); }
 
-/* --- REZUMAT MEDIE --- */
-.v-rating-summary {
-    margin-bottom: 60px;
-    animation: fadeIn 1.5s ease;
-}
-
-.v-average-number {
-    font-family: 'Cinzel', serif;
-    font-size: 5rem;
-    color: #C5A47E;
-    line-height: 1;
-    margin-bottom: 10px;
-}
-
-.v-average-stars {
-    color: #C5A47E;
-    font-size: 1.8rem;
-    letter-spacing: 8px;
-    margin-bottom: 15px;
-}
-
-.v-total-count {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 0.75rem;
-    text-transform: uppercase;
-    letter-spacing: 3px;
-    color: rgba(229, 217, 195, 0.4);
-}
-
-/* --- GRID RECENZII --- */
 .v-reviews-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
@@ -2425,268 +573,107 @@ header, .atelier-header, .header-premium, .navbar {
     margin-bottom: 20px;
 }
 
-.v-review-author {
-    font-family: 'Cinzel', serif;
-    color: #C5A47E;
-    font-size: 0.9rem;
-    letter-spacing: 2px;
-}
+.v-review-author { font-family: 'Cinzel', serif; color: #C5A47E; font-size: 0.9rem; letter-spacing: 2px; }
 
-/* --- BUTON ESTETIC PREMIUM --- */
-.v-btn-container {
-    margin-top: 80px;
-}
+/* BUTONUL ARTISTIC */
+.v-btn-wrapper { margin-top: 80px; display: flex; justify-content: center; perspective: 1000px; }
+.v-art-btn { position: relative; padding: 22px 60px; background: transparent; border: 1px solid rgba(197, 164, 126, 0.3); cursor: pointer; overflow: hidden; transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1); outline: none; }
+.v-btn-bg { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: #C5A47E; transform: scaleX(0); transform-origin: right; transition: transform 0.6s cubic-bezier(0.165, 0.84, 0.44, 1); z-index: 1; }
+.v-btn-content { position: relative; z-index: 2; display: flex; align-items: center; gap: 15px; color: #C5A47E; transition: all 0.5s ease; }
+.v-btn-text { font-family: 'Montserrat', sans-serif; font-size: 0.75rem; font-weight: 400; text-transform: uppercase; letter-spacing: 6px; }
+.v-btn-icon { font-size: 0.8rem; opacity: 0.5; transition: transform 0.8s ease; }
 
-.v-premium-btn {
-    position: relative;
-    background: transparent;
-    border: 1px solid rgba(197, 164, 126, 0.4);
-    color: #C5A47E;
-    padding: 20px 50px;
-    font-family: 'Montserrat', sans-serif;
-    font-size: 0.8rem;
-    text-transform: uppercase;
-    letter-spacing: 4px;
-    cursor: pointer;
-    overflow: hidden;
-    z-index: 1;
-    transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
-}
+.v-art-btn:hover { border-color: #C5A47E; box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4); transform: translateY(-5px); }
+.v-art-btn:hover .v-btn-bg { transform: scaleX(1); transform-origin: left; }
+.v-art-btn:hover .v-btn-content { color: #050505; }
+.v-art-btn:hover .v-btn-icon { transform: rotate(180deg); opacity: 1; }
 
-.v-premium-btn::before {
-    content: '';
-    position: absolute;
-    bottom: -100%;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: #C5A47E;
-    z-index: -1;
-    transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
-}
-
-.v-premium-btn:hover {
-    color: #050505;
-    letter-spacing: 6px;
-    box-shadow: 0 15px 30px rgba(197, 164, 126, 0.15);
-}
-
-.v-premium-btn:hover::before {
-    bottom: 0;
-}
-
-/* --- MODAL & FORMULAR --- */
-.v-review-modal {
-    display: none;
+/* WHATSAPP FIXED LEFT */
+.wa-container {
     position: fixed;
-    z-index: 10000;
-    top: 0; left: 0;
-    width: 100%; height: 100%;
-    background: rgba(0, 0, 0, 0.95);
-    align-items: center;
-    justify-content: center;
-    backdrop-filter: blur(10px);
+    bottom: 40px;
+    left: 40px;
+    z-index: 9999;
 }
 
-.v-modal-content {
-    background: #0a0a0a;
-    padding: 50px;
-    width: 90%;
-    max-width: 500px;
-    border: 1px solid #C5A47E;
+.wa-link { display: flex; flex-direction: row-reverse; align-items: center; text-decoration: none; gap: 15px; }
+.wa-text { font-family: 'Montserrat', sans-serif; font-size: 0.7rem; text-transform: uppercase; letter-spacing: 2px; color: #C5A47E; opacity: 0; transform: translateX(-20px); transition: all 0.6s cubic-bezier(0.22, 1, 0.36, 1); pointer-events: none; }
+.wa-link:hover .wa-text { opacity: 1; transform: translateX(0); }
+.wa-icon-box { width: 50px; height: 50px; background: #050505; border: 1px solid rgba(197, 164, 126, 0.3); border-radius: 50%; display: flex; align-items: center; justify-content: center; transition: all 0.5s ease; box-shadow: 0 10px 30px rgba(0,0,0,0.3); position: relative; overflow: hidden; }
+.wa-svg { width: 20px; fill: #C5A47E; transition: all 0.5s ease; }
+.wa-icon-box::after { content: ''; position: absolute; width: 100%; height: 100%; border-radius: 50%; border: 1px solid #C5A47E; animation: wa-pulse 3s infinite; }
+@keyframes wa-pulse { 0% { transform: scale(1); opacity: 0.5; } 100% { transform: scale(1.5); opacity: 0; } }
+.wa-link:hover .wa-icon-box { background: #C5A47E; border-color: #C5A47E; }
+.wa-link:hover .wa-svg { fill: #050505; transform: scale(1.1); }
+
+/* =========================================
+   CINEMATIC FOOTER - LIGA SUPERIOARĂ
+   ========================================= */
+.cinematic-footer {
     position: relative;
-}
-
-.v-close {
-    position: absolute;
-    top: 20px; right: 25px;
-    color: #C5A47E;
-    font-size: 30px;
-    cursor: pointer;
-}
-
-/* Sistem Selectare Stele */
-.v-star-input {
-    display: flex;
-    flex-direction: row-reverse;
-    justify-content: center;
-    font-size: 2.5rem;
-    margin-bottom: 25px;
-}
-
-.v-star-input span {
-    color: #222;
-    cursor: pointer;
-    transition: 0.3s;
-}
-
-.v-star-input span:hover,
-.v-star-input span:hover ~ span,
-.v-star-input span.active,
-.v-star-input span.active ~ span {
-    color: #C5A47E;
-    text-shadow: 0 0 15px rgba(197, 164, 126, 0.4);
-}
-
-.v-modal-content input, 
-.v-modal-content textarea {
-    width: 100%;
-    background: #050505;
-    border: 1px solid #333;
-    color: #fdfaf5;
-    padding: 15px;
-    margin-bottom: 20px;
-    font-family: 'Montserrat', sans-serif;
-    outline: none;
-}
-
-.v-modal-content input:focus, 
-.v-modal-content textarea:focus {
-    border-color: #C5A47E;
-}
-
-.v-submit-btn {
-    width: 100%;
-    background: #C5A47E;
-    color: #050505;
-    border: none;
-    padding: 18px;
-    font-family: 'Montserrat', sans-serif;
-    font-weight: bold;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    cursor: pointer;
-    transition: 0.3s;
-}
-
-.v-submit-btn:hover {
-    background: #fdfaf5;
-}
-
-/* Moderare Admin */
-.delete-review-btn {
-    background: none;
-    border: none;
-    color: #ff4d4d;
-    font-size: 0.6rem;
-    cursor: pointer;
-    margin-top: 15px;
-    opacity: 0.4;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-}
-
-.delete-review-btn:hover {
-    opacity: 1;
-}
-
-/* Animații */
-@keyframes fadeIn {
-    from { opacity: 0; transform: translateY(20px); }
-    to { opacity: 1; transform: translateY(0); }
-}
-
-/* Responsivitate */
-@media (max-width: 768px) {
-    .v-average-number { font-size: 3.5rem; }
-    .v-reviews-grid { grid-template-columns: 1fr; }
-    .v-modal-content { padding: 30px; }
-}
-
-/* --- CONTAINER BUTON --- */
-.v-btn-wrapper {
-    margin-top: 80px;
-    display: flex;
-    justify-content: center;
-    perspective: 1000px;
-}
-
-/* --- BUTONUL ARTISTIC --- */
-.v-art-btn {
-    position: relative;
-    padding: 22px 60px;
-    background: transparent;
-    border: 1px solid rgba(197, 164, 126, 0.3); /* Bordură foarte fină */
-    cursor: pointer;
+    background-color: #050505;
+    padding: 120px 0 40px 0;
     overflow: hidden;
-    transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
-    outline: none;
+    border-top: 1px solid rgba(197, 164, 126, 0.1);
 }
 
-/* --- FUNDALUL CARE APARE LA HOVER --- */
-.v-btn-bg {
+.footer-bg-text {
     position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: #C5A47E;
-    transform: scaleX(0); /* Pleacă de la 0 lățime */
-    transform-origin: right; /* Se deschide din dreapta spre stânga */
-    transition: transform 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
-    z-index: 1;
+    bottom: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-family: 'Cinzel', serif;
+    font-size: 16vw;
+    font-weight: 900;
+    color: rgba(197, 164, 126, 0.02);
+    white-space: nowrap;
+    pointer-events: none;
+    z-index: 0;
 }
 
-/* --- CONȚINUTUL (TEXT + ICONIȚE) --- */
-.v-btn-content {
-    position: relative;
-    z-index: 2;
-    display: flex;
-    align-items: center;
-    gap: 15px;
-    color: #C5A47E;
-    transition: all 0.5s ease;
-}
+.footer-container { max-width: 1400px; margin: 0 auto; padding: 0 50px; position: relative; z-index: 1; }
+.footer-grid { display: grid; grid-template-columns: 1.5fr 0.8fr 1fr 1fr; gap: 50px; margin-bottom: 80px; }
+.footer-label { display: block; font-family: 'Montserrat', sans-serif; font-size: 0.65rem; text-transform: uppercase; letter-spacing: 3px; color: #C5A47E; margin-bottom: 30px; }
+.footer-static-text { font-family: 'Cinzel', serif; font-size: 0.8rem; color: rgba(229, 217, 195, 0.6); margin-bottom: 12px; letter-spacing: 1px; }
 
-.v-btn-text {
+.footer-links a {
     font-family: 'Montserrat', sans-serif;
-    font-size: 0.75rem;
-    font-weight: 400;
-    text-transform: uppercase;
-    letter-spacing: 6px;
+    font-size: 0.85rem;
+    color: rgba(229, 217, 195, 0.4);
+    text-decoration: none;
+    display: block;
+    margin-bottom: 12px;
+    transition: 0.4s ease;
 }
 
-.v-btn-icon {
-    font-size: 0.8rem;
-    opacity: 0.5;
-    transition: transform 0.8s ease;
+.footer-links a:hover { color: #E5D9C3; transform: translateX(5px); }
+.footer-cta-email { font-family: 'Montserrat', sans-serif; color: #FFFFFF !important; border-bottom: 1px solid rgba(197, 164, 126, 0.3); padding-bottom: 3px; display: inline-block !important; }
+.footer-bottom { border-top: 1px solid rgba(229, 217, 195, 0.05); padding-top: 40px; display: flex; justify-content: space-between; align-items: center; }
+.footer-legal { font-family: 'Montserrat', sans-serif; font-size: 0.6rem; letter-spacing: 2px; color: rgba(229, 217, 195, 0.3); display: flex; align-items: center; gap: 15px; }
+.legal-dots { width: 3px; height: 3px; background: #C5A47E; border-radius: 50%; }
+.back-to-top a { font-family: 'Montserrat', sans-serif; font-size: 0.7rem; text-transform: uppercase; color: #C5A47E; text-decoration: none; letter-spacing: 2px; }
+
+/* =========================================
+   RESPONSIVE (MOBIL ALL-IN-ONE)
+   ========================================= */
+@media (max-width: 1024px) {
+    .footer-grid { grid-template-columns: 1fr 1fr; gap: 40px; }
+    .footer-bg-text { font-size: 25vw; }
 }
 
-/* --- EFECTE DE HOVER --- */
-.v-art-btn:hover {
-    border-color: #C5A47E;
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
-    transform: translateY(-5px);
+@media (max-width: 992px) {
+    .hero h1, .hero-premium h1 { font-size: 3rem; letter-spacing: 6px; }
+    .rand, .rand:nth-child(even) { flex-direction: column !important; text-align: center; padding: 60px 5%; gap: 40px; }
+    .v-timeline-line { left: 20px; }
+    .v-step { flex-direction: row !important; margin-bottom: 50px; }
+    .v-step-content { width: calc(100% - 60px); text-align: left !important; margin-left: 40px; }
+    .v-step-dot { left: 20px; }
 }
 
-.v-art-btn:hover .v-btn-bg {
-    transform: scaleX(1);
-    transform-origin: left; /* Se închide spre stânga la final */
+@media (max-width: 600px) {
+    .footer-grid { grid-template-columns: 1fr; }
+    .footer-bottom { flex-direction: column; gap: 20px; text-align: center; }
 }
 
-.v-art-btn:hover .v-btn-content {
-    color: #050505; /* Textul devine negru pe fundalul auriu */
-}
-
-.v-art-btn:hover .v-btn-icon {
-    transform: rotate(180deg);
-    opacity: 1;
-}
-
-/* --- EFECT DE STRĂLUCIRE FINĂ --- */
-.v-art-btn::after {
-    content: '';
-    position: absolute;
-    top: -50%;
-    left: -50%;
-    width: 200%;
-    height: 200%;
-    background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);
-    opacity: 0;
-    transition: opacity 0.6s ease;
-    z-index: 3;
-}
-
-.v-art-btn:hover::after {
-    opacity: 1;
-}
+@keyframes fadeInDown { from { opacity: 0; transform: translateY(-30px); } to { opacity: 1; transform: translateY(0); } }
+@keyframes fadeInUp { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: translateY(0); } }
