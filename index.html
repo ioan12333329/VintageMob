@@ -9,356 +9,45 @@
     <meta name="description" content="Atelier specializat în restaurare mobilă din lemn masiv și recondiționare mobilier vechi în Constanța, Mamaia și Năvodari. Peste 35 ani de experiență în tâmplărie premium.">
     <meta name="keywords" content="restaurare mobila constanta, reconditionare mobilier vechi constanta, tamplarie lemn la comanda constanta, reconditionare usi lemn constanta, restaurare mobila lemn masiv, atelier tamplarie navodari, reconditionare mobila mamaia">
     
-    <!-- OPTIMIZARE TELEFON: Suport pentru iconițe de apel și randare rapidă pe mobil -->
     <meta name="format-detection" content="telephone=no">
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,400&family=Cinzel:wght@400;700&family=Montserrat:wght@200;300;400;600&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-
-    <!-- CSS PREMIUM REFINED - NO OVERLAP & ELEVATED VIBE -->
-    <style>
-        :root {
-            --premium-black: #0B0B0B;
-            --premium-gray: #1A1A1A;
-            --premium-light-gray: #F5F5F7;
-            --premium-gold: #C5A880;
-            --text-muted: #86868B;
-        }
-
-        /* Reset global anti-overflow */
-        html, body {
-            overflow-x: hidden;
-            max-width: 100%;
-            margin: 0;
-            padding: 0;
-            background-color: #ffffff;
-            -webkit-font-smoothing: antialiased;
-            scroll-behavior: smooth;
-        }
-
-        /* HEADER COMPLET NEGRU CU EFECT DE STICLĂ MATĂ (PREMIUM SMOOTH) */
-        .v-header-fixed {
-            background: rgba(0, 0, 0, 0.85) !important; 
-            backdrop-filter: blur(20px);
-            -webkit-backdrop-filter: blur(20px);
-            border-bottom: 1px solid rgba(255, 255, 255, 0.08) !important;
-            position: fixed !important;
-            top: 0;
-            left: 0;
-            width: 100%;
-            z-index: 9999 !important;
-            box-sizing: border-box;
-            transition: all 0.3s ease;
-        }
-
-        .v-header-container {
-            max-width: 1400px;
-            margin: 0 auto;
-            padding: 20px 40px !important;
-            display: flex !important;
-            justify-content: space-between !important;
-            align-items: center !important;
-        }
-
-        .v-left-header-zone {
-            display: flex;
-            align-items: center;
-            gap: 15px;
-        }
-
-        /* LOGO COMPLET ALB */
-        .v-logo-box .v-logo {
-            font-family: 'Playfair Display', serif;
-            font-size: 24px !important;
-            font-weight: 700;
-            color: #ffffff !important; 
-            text-decoration: none;
-            letter-spacing: 2px;
-            display: inline-block;
-            line-height: 1;
-        }
-
-        .v-nav {
-            display: flex !important;
-            gap: 35px !important;
-        }
-
-        /* LOGO ȘI TEXTE MENIU COMPLET ALBE */
-        .v-nav .v-link {
-            font-family: 'Inter', sans-serif;
-            font-size: 13px !important;
-            text-transform: uppercase;
-            letter-spacing: 1.5px;
-            font-weight: 500;
-            color: #ffffff !important; 
-            text-decoration: none !important;
-            transition: color 0.3s ease;
-        }
-
-        .v-nav .v-link:hover {
-            color: var(--premium-gold) !important;
-        }
-
-        .v-action {
-            display: block !important;
-        }
-
-        .v-tel-link {
-            text-decoration: none !important;
-            color: #ffffff !important;
-            text-align: right;
-            display: block;
-            transition: transform 0.2s ease;
-        }
-        
-        .v-tel-link:hover {
-            transform: translateY(-1px);
-        }
-
-        .v-tel-label {
-            display: block;
-            font-size: 10px;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            color: var(--premium-gold) !important;
-            margin-bottom: 2px;
-        }
-
-        .v-tel-num {
-            font-size: 14px;
-            font-weight: 600;
-            letter-spacing: 0.5px;
-            color: #ffffff !important;
-        }
-
-        /* HAMBURGER BUTTON AURIE PENTRU MOBIL */
-        .v-mobile-toggle {
-            display: none;
-            background: none;
-            border: none;
-            cursor: pointer;
-            padding: 8px 4px;
-            z-index: 10000;
-        }
-
-        .v-mobile-toggle span {
-            display: block;
-            width: 22px;
-            height: 1.5px;
-            background: var(--premium-gold);
-            margin: 5px 0;
-            transition: 0.3s ease;
-        }
-
-        /* HERO CLEAN AND HERO IMAGE */
-        .hero {
-            position: relative;
-            width: 100%;
-            min-height: 75vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            overflow: hidden;
-            margin-top: 65px; 
-        }
-
-        .hero-content {
-            position: relative;
-            z-index: 2;
-            text-align: center;
-            color: #ffffff;
-            padding: 0 24px;
-        }
-        
-        .hero-content h1 {
-            font-family: 'Playfair Display', serif;
-            font-size: 3.5rem;
-            font-weight: 700;
-            margin-bottom: 10px;
-        }
-
-        /* IMAGE HOVER EFFECTS FOR BOXES */
-        .poza {
-            overflow: hidden;
-        }
-        .poza img {
-            transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
-        }
-        .poza:hover img {
-            transform: scale(1.03);
-        }
-
-        /* COMPORTAMENT MOBIL INTEGRAL */
-        @media (max-width: 991px) {
-            .v-header-container {
-                padding: 15px 20px !important;
-            }
-
-            .v-mobile-toggle {
-                display: block !important;
-            }
-
-            .v-nav {
-                position: fixed;
-                top: 0;
-                left: -100%;
-                width: 85%;
-                max-width: 320px;
-                height: 100vh;
-                background: #000000 !important;
-                flex-direction: column !important;
-                justify-content: flex-start !important;
-                align-items: flex-start !important;
-                gap: 30px !important;
-                padding: 100px 40px 40px 40px !important;
-                box-shadow: 20px 0 50px rgba(0,0,0,0.5);
-                border-right: 1px solid rgba(255, 255, 255, 0.1);
-                transition: left 0.4s cubic-bezier(0.16, 1, 0.3, 1);
-                z-index: 9998;
-                box-sizing: border-box;
-            }
-
-            .v-nav.active {
-                left: 0 !important;
-            }
-
-            .v-nav .v-link {
-                font-size: 18px !important;
-                letter-spacing: 2px;
-                font-weight: 600;
-                color: #ffffff !important;
-                width: 100%;
-                border-bottom: 1px solid rgba(255,255,255,0.08) !important;
-                padding-bottom: 12px;
-            }
-
-            .v-mobile-toggle.active span:nth-child(1) {
-                transform: translateY(6.5px) rotate(45deg);
-                background: #ffffff;
-            }
-            .v-mobile-toggle.active span:nth-child(2) {
-                opacity: 0;
-            }
-            .v-mobile-toggle.active span:nth-child(3) {
-                transform: translateY(-6.5px) rotate(-45deg);
-                background: #ffffff;
-            }
-
-            .v-action {
-                display: none !important;
-            }
-
-            .hero {
-                min-height: 55vh !important;
-                margin-top: 55px;
-            }
-            .hero h1 {
-                font-size: 2.3rem !important;
-                letter-spacing: -1px !important;
-            }
-
-            .v-concept-container {
-                padding: 50px 20px !important;
-            }
-            .v-concept-title {
-                font-size: 2rem !important;
-            }
-
-            .v-timeline-container {
-                padding: 40px 20px !important;
-            }
-            .v-timeline-line {
-                left: 4px !important;
-            }
-            .v-step {
-                width: 100% !important;
-                left: 0 !important;
-                padding-left: 30px !important;
-                padding-right: 0 !important;
-                text-align: left !important;
-                margin-bottom: 35px !important;
-            }
-            .v-step-dot {
-                left: 4px !important;
-            }
-
-            .rand {
-                flex-direction: column !important;
-                gap: 20px !important;
-                padding: 0 20px !important;
-                margin-bottom: 50px !important;
-            }
-            .rand.invers {
-                flex-direction: column !important;
-            }
-            .poza, .text-box {
-                width: 100% !important;
-                padding: 0 !important;
-            }
-            .poza img {
-                width: 100% !important;
-                height: auto !important;
-            }
-
-            .stats-section {
-                flex-direction: column !important;
-                gap: 35px !important;
-                padding: 50px 20px !important;
-            }
-
-            .cinematic-footer {
-                padding: 50px 20px 20px 20px !important;
-            }
-            .footer-grid {
-                grid-template-columns: 1fr !important;
-                gap: 35px !important;
-            }
-            .footer-bg-text {
-                font-size: 15vw !important;
-            }
-            .footer-bottom {
-                flex-direction: column !important;
-                align-items: flex-start !important;
-                gap: 15px !important;
-            }
-        }
-    </style>
 </head>
 
-<body>
+<body class="bg-dark">
 
-   <header class="v-header-fixed">
-    <div class="v-header-container">
-        
-        <!-- ZONA STÂNGA -->
-        <div class="v-left-header-zone">
-            <button class="v-mobile-toggle" id="mobile-menu-btn" aria-label="Meniu">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
-            <div class="v-logo-box">
-                <a href="index.html" class="v-logo">VintageMob</a>
+    <!-- HEADER 100% UNIFICAT PENTRU TOATE PAGINILE -->
+    <header class="v-header-fixed">
+        <div class="v-header-container">
+            
+            <div class="v-left-header-zone">
+                <button class="v-mobile-toggle" id="mobile-menu-btn" aria-label="Meniu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <div class="v-logo-box">
+                    <a href="index.html" class="v-logo">VintageMob</a>
+                </div>
             </div>
+
+            <nav class="v-nav" id="v-navigation-menu">
+                <a href="index.html" class="v-link">Acasă</a>
+                <a href="portofoliu.html" class="v-link">Portofoliu</a>
+                <a href="despre.html" class="v-link">Atelier Constanța</a>
+                <a href="contact.html" class="v-link">Contact</a>
+            </nav>
+
+            <div class="v-action">
+                <a href="tel:0767902790" class="v-tel-link">
+                    <span class="v-tel-label">Consultanță Constanța</span>
+                    <span class="v-tel-num">0767.902.790</span>
+                    <div class="v-line-anim"></div>
+                </a>
+            </div>
+
         </div>
-
-        <nav class="v-nav" id="v-navigation-menu">
-            <a href="index.html" class="v-link">Acasă</a>
-            <a href="portofoliu.html" class="v-link">Portofoliu</a>
-            <a href="despre.html" class="v-link">Atelier Constanța</a>
-            <a href="contact.html" class="v-link">Contact</a>
-        </nav>
-
-        <div class="v-action">
-            <a href="tel:0767902790" class="v-tel-link">
-                <span class="v-tel-label">Consultanță Constanța</span>
-                <span class="v-tel-num">0767.902.790</span>
-                <div class="v-line-anim"></div>
-            </a>
-        </div>
-
-    </div>
-</header>
-
+    </header>
 
     <section class="hero">
         <div class="hero-content">
@@ -368,90 +57,87 @@
     </section>
 
     <section class="v-concept-section v-override">
-    <div class="v-concept-container">
-        <div class="v-accent-badge">VintageMob Atelier Dobrogea</div>
-        
-        <h2 class="v-concept-title">Pasiune pentru <em>detaliu și conservare</em></h2>
-        
-        <div class="v-concept-content">
-            <p>Fiecare piesă de mobilier vechi ascunde o poveste unică pe litoral. La VintageMob Constanța, ne asigurăm că acea poveste continuă prin tehnici de restaurare tradiționale, finisaje ecologice de lux rezistente la umiditate și o atenție microscopică acordată fiecărei fibre a lemnului.</p>
-        </div>
+        <div class="v-concept-container">
+            <div class="v-accent-badge">VintageMob Atelier Dobrogea</div>
+            
+            <h2 class="v-concept-title">Pasiune pentru <em>detaliu și conservare</em></h2>
+            
+            <div class="v-concept-content">
+                <p>Fiecare piesă de mobilier vechi ascunde o poveste unică pe litoral. La VintageMob Constanța, ne asigurăm că acea poveste continuă prin tehnici de restaurare tradiționale, finisaje ecologice de lux rezistente la umiditate și o atenție microscopică acordată fiecărei fibre a lemnului.</p>
+            </div>
 
-        <div class="v-concept-footer">
-            <div class="v-minimal-line"></div>
+            <div class="v-concept-footer">
+                <div class="v-minimal-line"></div>
+            </div>
         </div>
-    </div>
-</section>
-
+    </section>
 
     <section class="v-timeline-section">
-    <div class="v-timeline-header">
-        <span class="v-tel-label">Procesul de Restaurare</span>
-        <h2>Drumul profesional de la Vechi la Etern</h2>
-    </div>
-
-    <div class="v-timeline-container">
-        <div class="v-timeline-line"></div>
-
-        <div class="v-step item-left">
-            <div class="v-step-content">
-                <span class="v-step-number">01</span>
-                <h3>Recepția & Analiza Structurală</h3>
-                <p>Aducem mobila la atelierul din Constanța cu maximă grijă. Evaluăm structura în profunzime și identificăm zonele slăbite ce necesită consolidare tradițională din lemn masiv.</p>
-            </div>
-            <div class="v-step-dot"></div>
+        <div class="v-timeline-header">
+            <span class="v-tel-label">Procesul de Restaurare</span>
+            <h2>Drumul profesional de la Vechi la Etern</h2>
         </div>
 
-        <div class="v-step item-right">
-            <div class="v-step-content">
-                <span class="v-step-number">02</span>
-                <h3>Decaparea & Șlefuirea Manuală</h3>
-                <p>Îndepărtăm straturile vechi și degradate de lac sau vopsea prin șlefuire atentă, până când ajungem la fibra perfect curată a lemnului sănătos.</p>
-            </div>
-            <div class="v-step-dot"></div>
-        </div>
+        <div class="v-timeline-container">
+            <div class="v-timeline-line"></div>
 
-        <div class="v-step item-left">
-            <div class="v-step-content">
-                <span class="v-step-number">03</span>
-                <h3>Tratare Anti-Umiditate & Chituire</h3>
-                <p>Aplicăm tratamente profesionale antifungice și împotriva cariilor. Reconstruim fin micile imperfecțiuni, pregătind textura pentru noul strat de finisaj premium.</p>
+            <div class="v-step item-left">
+                <div class="v-step-content">
+                    <span class="v-step-number">01</span>
+                    <h3>Recepția & Analiza Structurală</h3>
+                    <p>Aducem mobila la atelierul din Constanța cu maximă grijă. Evaluăm structura în profunzime și identificăm zonele slăbite ce necesită consolidare tradițională din lemn masiv.</p>
+                </div>
+                <div class="v-step-dot"></div>
             </div>
-            <div class="v-step-dot"></div>
-        </div>
 
-        <div class="v-step item-right">
-            <div class="v-step-content">
-                <span class="v-step-number">04</span>
-                <h3>Degresare & Protecție Feronerie</h3>
-                <p>Curățăm absolut orice impuritate din pori. Izolăm și restaurăm cu atenție elementele istorice originale (feronerie din bronz, alamă sau sticlă) pentru eficiență maximă.</p>
+            <div class="v-step item-right">
+                <div class="v-step-content">
+                    <span class="v-step-number">02</span>
+                    <h3>Decaparea & Șlefuirea Manuală</h3>
+                    <p>Îndepărtăm straturile vechi și degradate de lac sau vopsea prin șlefuire atentă, până când ajungem la fibra perfect curată a lemnului sănătos.</p>
+                </div>
+                <div class="v-step-dot"></div>
             </div>
-            <div class="v-step-dot"></div>
-        </div>
 
-        <div class="v-step item-left">
-            <div class="v-step-content">
-                <span class="v-step-number">05</span>
-                <h3>Finisarea Premium sau Vopsirea</h3>
-                <p>Aplicăm straturi succesive de lacuri nobile (șerlac, ceară naturală) sau vopsea la comandă de cea mai înaltă calitate, obținând o textură fină și reflexii profunde.</p>
+            <div class="v-step item-left">
+                <div class="v-step-content">
+                    <span class="v-step-number">03</span>
+                    <h3>Tratare Anti-Umiditate & Chituire</h3>
+                    <p>Aplicăm tratamente profesionale antifungice și împotriva cariilor. Reconstruim fin micile imperfecțiuni, pregătind textura pentru noul strat de finisaj premium.</p>
+                </div>
+                <div class="v-step-dot"></div>
             </div>
-            <div class="v-step-dot"></div>
-        </div>
 
-        <div class="v-step item-right">
-            <div class="v-step-content">
-                <span class="v-step-number">06</span>
-                <h3>Uscarea Controlată & Livrarea</h3>
-                <p>Piesele se stabilizează în camera de uscare. După fixarea finisajului, piesa este gata să fie livrată în siguranță direct la casa ta din județul Constanța.</p>
+            <div class="v-step item-right">
+                <div class="v-step-content">
+                    <span class="v-step-number">04</span>
+                    <h3>Degresare & Protecție Feronerie</h3>
+                    <p>Curățăm absolut orice impuritate din pori. Izolăm și restaurăm cu atenție elementele istorice originale (feronerie din bronz, alamă sau sticlă) pentru eficiență maximă.</p>
+                </div>
+                <div class="v-step-dot"></div>
             </div>
-            <div class="v-step-dot"></div>
-        </div>
-    </div>
-</section>
 
+            <div class="v-step item-left">
+                <div class="v-step-content">
+                    <span class="v-step-number">05</span>
+                    <h3>Finisarea Premium sau Vopsirea</h3>
+                    <p>Aplicăm straturi succesive de lacuri nobile (șerlac, ceară naturală) sau vopsea la comandă de cea mai înaltă calitate, obținând o textură fină și reflexii profunde.</p>
+                </div>
+                <div class="v-step-dot"></div>
+            </div>
+
+            <div class="v-step item-right">
+                <div class="v-step-content">
+                    <span class="v-step-number">06</span>
+                    <h3>Uscarea Controlată & Livrarea</h3>
+                    <p>Piesele se stabilizează în camera de uscare. După fixarea finisajului, piesa este gata să fie livrată în siguranță direct la casa ta din județul Constanța.</p>
+                </div>
+                <div class="v-step-dot"></div>
+            </div>
+        </div>
+    </section>
 
     <section class="proiecte-home">
-        
         <div class="rand">
             <div class="poza"><img src="A11.jpg" alt="Restaurare mobila lemn masiv si reconditionare mobilier vechi Constanta"></div>
             <div class="text-box">
@@ -475,7 +161,6 @@
                 <p>Tâmplărie tradițională premium din lemn masiv stratificat. Soluții durabile și termoizolante pentru uși și ferestre cu geam termopan pe măsură.</p>
             </div>
         </div>
-
     </section>
 
     <section class="stats-section">
@@ -493,103 +178,105 @@
         </div>
     </section>
 
- <div class="wa-container">
-    <a href="https://wa.me/40767902790" target="_blank" class="wa-link">
-        <span class="wa-text">Consultanță WhatsApp Constanța</span>
-        <div class="wa-icon-box">
-            <svg viewBox="0 0 448 512" class="wa-svg">
-                <path d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-5.5-2.8-23.2-8.5-44.2-27.1-16.4-14.6-27.4-32.7-30.6-38.2-3.2-5.6-.3-8.6 2.4-11.4 2.5-2.5 5.5-6.5 8.3-9.8 2.8-3.3 3.7-5.6 5.5-9.3 1.8-3.7.9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6.1-3.7.3-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 13.2 5.8 23.5 9.2 31.5 11.8 13.3 4.2 25.4 3.6 35 2.2 10.7-1.5 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z"/>
-            </svg>
-        </div>
-    </a>
-</div>
-
- <footer class="cinematic-footer">
-    <div class="footer-bg-text">VM ATELIER</div>
-
-    <div class="footer-container">
-        <div class="footer-grid">
-            
-            <div class="footer-col brand-col">
-    <!-- LOGO VM PENTRU REDIRECȚIONARE ȘI ANULARE MOV DEFAULT -->
-    <a href="index.html" style="font-family: 'Cinzel', serif !important; font-size: 2.2rem !important; font-weight: 700 !important; color: #C5A47E !important; text-decoration: none !important; letter-spacing: 4px !important; text-transform: uppercase !important; display: inline-block; margin-bottom: 20px;">VM</a>
-    <p class="brand-desc">Atelier premium de restaurare lemn.</p>
-</div>
-            <div class="footer-col">
-                <span class="footer-label">Navigare</span>
-                <nav class="footer-links">
-                    <a href="index.html">Acasă</a>
-                    <a href="portofoliu.html">Portofoliu Lucrări</a>
-                    <a href="contact.html">Contact Direct</a>
-                </nav>
+    <!-- WHATSAPP WIDGET CONSTANȚA -->
+    <div class="wa-container">
+        <a href="https://wa.me/40767902790" target="_blank" class="wa-link">
+            <span class="wa-text">Consultanță WhatsApp Constanța</span>
+            <div class="wa-icon-box">
+                <svg viewBox="0 0 448 512" class="wa-svg"><path d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-5.5-2.8-23.2-8.5-44.2-27.1-16.4-14.6-27.4-32.7-30.6-38.2-3.2-5.6-.3-8.6 2.4-11.4 2.5-2.5 5.5-6.5 8.3-9.8 2.8-3.3 3.7-5.6 5.5-9.3 1.8-3.7.9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6.1-3.7.3-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 13.2 5.8 23.5 9.2 31.5 11.8 13.3 4.2 25.4 3.6 35 2.2 10.7-1.5 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z"/></svg>
             </div>
-
-            <div class="footer-col">
-                <span class="footer-label">Valori Dobrogea</span>
-                <div class="footer-static-wrap">
-                    <p class="footer-static-text">Tratamente Anti-Umiditate</p>
-                    <p class="footer-static-text">Finisaje Tradiționale Nobile</p>
-                    <p class="footer-static-text">Atenție Riguroasă la Detaliu</p>
-                </div>
-            </div>
-
-            <div class="footer-col">
-                <span class="footer-label">Zonă Acoperire</span>
-                <div class="footer-links">
-                    <p class="footer-static-text">Constanța, Mamaia, Năvodari</p>
-                    <a href="mailto:ion.sarhos@yahoo.com" class="footer-cta-email">ion.sarhos@yahoo.com</a>
-                </div>
-            </div>
-
-        </div>
-
-        <div class="footer-bottom">
-            <div class="footer-legal">
-                <span>VINTAGE MOB — ATELIER JUDEȚEAN DE RESTAURARE MOBILĂ ȘI TÂMPLĂRIE ARTISTICĂ</span>
-                <div class="legal-dots"></div>
-                <span>&copy; 2026 VINTAGE MOB. Toate drepturile rezervate.</span>
-            </div>
-            <div class="back-to-top">
-                <a href="#top">Înapoi sus —</a>
-            </div>
-        </div>
+        </a>
     </div>
-</footer>
 
-    <!-- SCRIPT DE DESCHIDERE PENTRU MENIU STÂNGA -->
+    <!-- CINEMATIC FOOTER UNIFICAT -->
+    <footer class="cinematic-footer">
+        <div class="footer-bg-text">VM ATELIER</div>
+
+        <div class="footer-container">
+            <div class="footer-grid">
+                
+                <div class="footer-col brand-col">
+                    <a href="index.html" style="font-family: 'Cinzel', serif !important; font-size: 2.2rem !important; font-weight: 700 !important; color: #C5A47E !important; text-decoration: none !important; letter-spacing: 4px !important; text-transform: uppercase !important; display: inline-block; margin-bottom: 20px;">VM</a>
+                    <p class="brand-desc">Atelier premium de restaurare lemn.</p>
+                </div>
+
+                <div class="footer-col">
+                    <span class="footer-label">Navigare</span>
+                    <nav class="footer-links">
+                        <a href="index.html">Acasă</a>
+                        <a href="portofoliu.html">Portofoliu Lucrări</a>
+                        <a href="contact.html">Contact Direct</a>
+                    </nav>
+                </div>
+
+                <div class="footer-col">
+                    <span class="footer-label">Valori Dobrogea</span>
+                    <div class="footer-static-wrap">
+                        <p class="footer-static-text">Tratamente Anti-Umiditate</p>
+                        <p class="footer-static-text">Finisaje Tradiționale Nobile</p>
+                        <p class="footer-static-text">Atenție Riguroasă la Detaliu</p>
+                    </div>
+                </div>
+
+                <div class="footer-col">
+                    <span class="footer-label">Zonă Acoperire</span>
+                    <div class="footer-links">
+                        <p class="footer-static-text">Constanța, Mamaia, Năvodari</p>
+                        <a href="mailto:ion.sarhos@yahoo.com" class="footer-cta-email">ion.sarhos@yahoo.com</a>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="footer-bottom">
+                <div class="footer-legal">
+                    <span>VINTAGE MOB — ATELIER JUDEȚEAN DE RESTAURARE MOBILĂ ȘI TÂMPLĂRIE ARTISTICĂ</span>
+                    <div class="legal-dots"></div>
+                    <span>&copy; 2026 VINTAGE MOB. Toate drepturile rezervate.</span>
+                </div>
+                <div class="back-to-top">
+                    <a href="#top">Înapoi sus —</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- SCRIPT CONTROL MENIU MOBIL -->
     <script>
         document.addEventListener('DOMContentLoaded', function() {
             const menuBtn = document.getElementById('mobile-menu-btn');
             const navMenu = document.getElementById('v-navigation-menu');
             const navLinks = document.querySelectorAll('.v-link');
 
-            menuBtn.addEventListener('click', function(e) {
-                e.stopPropagation();
-                menuBtn.classList.toggle('active');
-                navMenu.classList.toggle('active');
-                
-                if(navMenu.classList.contains('active')) {
-                    document.body.style.overflow = 'hidden';
-                } else {
-                    document.body.style.overflow = '';
-                }
-            });
-
-            navLinks.forEach(link => {
-                link.addEventListener('click', function() {
-                    menuBtn.classList.remove('active');
-                    navMenu.classList.remove('active');
-                    document.body.style.overflow = '';
+            if (menuBtn && navMenu) {
+                menuBtn.addEventListener('click', function(e) {
+                    e.stopPropagation();
+                    menuBtn.classList.toggle('active');
+                    navMenu.classList.toggle('active');
+                    
+                    if(navMenu.classList.contains('active')) {
+                        document.body.style.overflow = 'hidden';
+                    } else {
+                        document.body.style.overflow = '';
+                    }
                 });
-            });
 
-            document.addEventListener('click', function(e) {
-                if (!navMenu.contains(e.target) && !menuBtn.contains(e.target) && navMenu.classList.contains('active')) {
-                    menuBtn.classList.remove('active');
-                    navMenu.classList.remove('active');
-                    document.body.style.overflow = '';
-                }
-            });
+                navLinks.forEach(link => {
+                    link.addEventListener('click', function() {
+                        menuBtn.classList.remove('active');
+                        navMenu.classList.remove('active');
+                        document.body.style.overflow = '';
+                    });
+                });
+
+                document.addEventListener('click', function(e) {
+                    if (!navMenu.contains(e.target) && !menuBtn.contains(e.target) && navMenu.classList.contains('active')) {
+                        menuBtn.classList.remove('active');
+                        navMenu.classList.remove('active');
+                        document.body.style.overflow = '';
+                    }
+                });
+            }
         });
     </script>
     <script src="script.js"></script>
