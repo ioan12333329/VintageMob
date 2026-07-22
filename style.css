@@ -41,7 +41,7 @@ body.bg-dark {
 }
 
 /* ============================================================
-   HEADER FIXED & NAVIGAȚIE UNIFICATĂ
+   HEADER FIXED & NAVIGAȚIE UNIFICATĂ (OPTIMIZAT LAPTOP + MOBIL)
    ============================================================ */
 .v-header-fixed {
     position: fixed !important;
@@ -49,7 +49,7 @@ body.bg-dark {
     left: 0 !important;
     width: 100% !important;
     height: 90px !important;
-    background: rgba(5, 5, 5, 0.85) !important;
+    background: rgba(5, 5, 5, 0.9) !important;
     backdrop-filter: blur(20px) !important;
     -webkit-backdrop-filter: blur(20px) !important;
     border-bottom: 1px solid var(--border-dark) !important;
@@ -60,10 +60,10 @@ body.bg-dark {
 }
 
 .v-header-container {
-    max-width: 1440px !important;
+    max-width: 1400px !important;
     width: 100% !important;
     margin: 0 auto !important;
-    padding: 0 50px !important;
+    padding: 0 40px !important;
     display: flex !important;
     justify-content: space-between !important;
     align-items: center !important;
@@ -72,7 +72,7 @@ body.bg-dark {
 .v-left-header-zone {
     display: flex;
     align-items: center;
-    gap: 15px;
+    gap: 20px;
 }
 
 .v-logo-box .v-logo {
@@ -84,6 +84,7 @@ body.bg-dark {
     letter-spacing: 4px !important;
     text-transform: uppercase !important;
     transition: all 0.4s ease !important;
+    line-height: 1 !important;
 }
 
 .v-logo-box .v-logo:hover {
@@ -93,6 +94,7 @@ body.bg-dark {
 
 .v-nav {
     display: flex !important;
+    align-items: center !important;
     gap: 35px !important;
 }
 
@@ -101,19 +103,19 @@ body.bg-dark {
     font-size: 0.75rem !important;
     font-weight: 500 !important;
     text-transform: uppercase !important;
-    letter-spacing: 2px !important;
-    color: rgba(229, 217, 195, 0.6) !important;
+    letter-spacing: 2.5px !important;
+    color: rgba(229, 217, 195, 0.65) !important;
     text-decoration: none !important;
     transition: 0.3s ease !important;
 }
 
 .v-link:hover {
     color: var(--gold) !important;
-    transform: translateY(-1px);
 }
 
 .v-action {
     display: flex !important;
+    align-items: center !important;
     justify-content: flex-end !important;
 }
 
@@ -136,7 +138,7 @@ body.bg-dark {
 
 .v-tel-num {
     font-family: 'Cinzel', serif !important;
-    font-size: 1rem !important;
+    font-size: 1.05rem !important;
     color: var(--light) !important;
     letter-spacing: 1px !important;
     font-weight: 600 !important;
@@ -180,7 +182,7 @@ body.bg-dark {
    ============================================================ */
 .hero, .hero-premium {
     width: 100%;
-    min-height: 80vh;
+    min-height: 85vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -268,7 +270,7 @@ body.bg-dark {
 
 /* TIMELINE */
 .v-timeline-section {
-    padding: 100px 5%;
+    padding: 120px 5%;
     background-color: var(--dark-soft);
     position: relative;
 }
@@ -280,13 +282,13 @@ body.bg-dark {
 
 .v-timeline-header h2 {
     font-family: 'Cinzel', serif;
-    font-size: 2.5rem;
+    font-size: 2.8rem;
     color: var(--gold-light);
     margin-top: 10px;
 }
 
 .v-timeline-container {
-    max-width: 1100px;
+    max-width: 1200px;
     margin: 0 auto;
     position: relative;
 }
@@ -306,13 +308,13 @@ body.bg-dark {
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    margin-bottom: 60px;
+    margin-bottom: 70px;
     position: relative;
 }
 
 .v-step-content {
     width: 45%;
-    padding: 25px;
+    padding: 30px;
     background: rgba(15, 15, 15, 0.8);
     border: 1px solid var(--border-dark);
 }
@@ -329,14 +331,15 @@ body.bg-dark {
 .v-step-content h3 {
     font-family: 'Cinzel', serif;
     color: var(--gold-light);
-    font-size: 1.3rem;
-    margin-bottom: 10px;
+    font-size: 1.4rem;
+    margin-bottom: 12px;
 }
 
 .v-step-content p {
     font-family: 'Montserrat', sans-serif;
-    color: rgba(229, 217, 195, 0.6);
-    font-size: 0.9rem;
+    color: rgba(229, 217, 195, 0.65);
+    font-size: 0.95rem;
+    line-height: 1.7;
 }
 
 .v-step-dot {
@@ -366,8 +369,10 @@ body.bg-dark {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 60px 10%;
-    gap: 60px;
+    padding: 80px 10%;
+    gap: 80px;
+    max-width: 1400px;
+    margin: 0 auto;
 }
 
 .rand.invers, .rand:nth-child(even) {
@@ -384,6 +389,8 @@ body.bg-dark {
 .poza img {
     width: 100%;
     height: auto;
+    max-height: 550px;
+    object-fit: cover;
     display: block;
     transition: transform 0.8s ease;
 }
@@ -398,7 +405,7 @@ body.bg-dark {
 
 .text-box h3 {
     font-family: 'Cinzel', serif;
-    font-size: 1.8rem;
+    font-size: 2rem;
     color: var(--gold-light);
     margin-bottom: 20px;
     border-bottom: 1px solid var(--gold);
@@ -410,6 +417,7 @@ body.bg-dark {
     font-family: 'Montserrat', sans-serif;
     color: rgba(229, 217, 195, 0.65);
     line-height: 1.8;
+    font-size: 1.05rem;
 }
 
 /* STATS */
@@ -425,7 +433,7 @@ body.bg-dark {
 .stat-number {
     display: block;
     font-family: 'Cinzel', serif;
-    font-size: 3.8rem;
+    font-size: 4rem;
     font-weight: 700;
     color: var(--gold);
 }
@@ -439,7 +447,7 @@ body.bg-dark {
 }
 
 /* ============================================================
-   PORTOFOLIO PAGE STYLES (PORTOFOLIU.HTML)
+   PORTOFOLIO PAGE STYLES (PORTOFOLIU.HTML LAPTOP OPTIMIZED)
    ============================================================ */
 .portfolio-v3 {
     padding-top: 90px;
@@ -473,7 +481,7 @@ body.bg-dark {
     color: var(--gold);
 }
 
-/* VIDEO SECTION */
+/* VIDEO SECTION LAPTOP */
 .p-video-full {
     width: 100%;
     margin: 40px 0;
@@ -482,7 +490,8 @@ body.bg-dark {
 .p-video-wrapper-full {
     position: relative;
     width: 100%;
-    height: 70vh;
+    height: 75vh;
+    max-height: 750px;
     overflow: hidden;
 }
 
@@ -490,7 +499,7 @@ body.bg-dark {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    filter: brightness(0.6);
+    filter: brightness(0.55);
 }
 
 .v-scrolling-overlay {
@@ -504,21 +513,23 @@ body.bg-dark {
 
 .v-scroll-phrase {
     font-family: 'Cinzel', serif;
-    font-size: clamp(2rem, 6vw, 4.5rem);
+    font-size: clamp(2.5rem, 6vw, 5rem);
     color: var(--gold-light);
-    letter-spacing: 8px;
+    letter-spacing: 10px;
     text-shadow: 0 10px 30px rgba(0,0,0,0.8);
 }
 
-/* DIPICT BEFORE/AFTER */
+/* DIPICT BEFORE/AFTER LAPTOP */
 .p-project-entry {
-    padding: 100px 8%;
+    padding: 100px 10%;
+    max-width: 1400px;
+    margin: 0 auto;
 }
 
 .p-diptic {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 30px;
+    gap: 40px;
     margin-bottom: 40px;
 }
 
@@ -530,17 +541,17 @@ body.bg-dark {
 
 .p-frame img {
     width: 100%;
-    height: 500px;
+    height: 550px;
     object-fit: cover;
     display: block;
 }
 
 .p-meta-tag {
     position: absolute;
-    bottom: 15px;
-    left: 15px;
+    bottom: 20px;
+    left: 20px;
     background: rgba(5,5,5,0.85);
-    padding: 6px 15px;
+    padding: 8px 18px;
     font-family: 'Montserrat', sans-serif;
     font-size: 0.65rem;
     text-transform: uppercase;
@@ -557,14 +568,14 @@ body.bg-dark {
 
 .p-number {
     font-family: 'Cinzel', serif;
-    font-size: 2rem;
+    font-size: 2.2rem;
     color: var(--gold);
 }
 
 .p-info h2 {
     font-family: 'Cinzel', serif;
     color: var(--gold-light);
-    font-size: 1.8rem;
+    font-size: 2rem;
     margin-bottom: 15px;
 }
 
@@ -573,6 +584,7 @@ body.bg-dark {
     color: rgba(229, 217, 195, 0.7);
     line-height: 1.8;
     margin-bottom: 20px;
+    font-size: 1.05rem;
 }
 
 .p-link-luxury {
@@ -584,11 +596,17 @@ body.bg-dark {
     text-decoration: none;
     border-bottom: 1px solid var(--gold);
     padding-bottom: 3px;
+    transition: 0.3s ease;
 }
 
-/* CAROUSEL GALLERY */
+.p-link-luxury:hover {
+    color: var(--gold-light);
+    border-color: var(--gold-light);
+}
+
+/* CAROUSEL GALLERY LAPTOP */
 .p-gallery-showcase {
-    padding: 80px 5%;
+    padding: 100px 5%;
     background: var(--dark-soft);
 }
 
@@ -599,13 +617,13 @@ body.bg-dark {
 
 .p-gallery-header h2 {
     font-family: 'Cinzel', serif;
-    font-size: 2.5rem;
+    font-size: 2.8rem;
     color: var(--gold-light);
 }
 
 .p-carousel {
     position: relative;
-    max-width: 1000px;
+    max-width: 1100px;
     margin: 0 auto;
 }
 
@@ -625,7 +643,7 @@ body.bg-dark {
 
 .p-slide img {
     width: 100%;
-    height: 600px;
+    height: 650px;
     object-fit: cover;
     display: block;
 }
@@ -634,47 +652,48 @@ body.bg-dark {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    background: rgba(5,5,5,0.8);
+    background: rgba(5,5,5,0.85);
     border: 1px solid var(--gold);
     color: var(--gold);
-    font-size: 1.5rem;
-    padding: 15px 20px;
+    font-size: 1.8rem;
+    padding: 15px 22px;
     cursor: pointer;
     z-index: 10;
     transition: 0.3s ease;
 }
 
 .p-nav:hover { background: var(--gold); color: var(--dark); }
-.p-prev { left: -25px; }
-.p-next { right: -25px; }
+.p-prev { left: -30px; }
+.p-next { right: -30px; }
 
 .p-final-cta {
-    padding: 120px 5%;
+    padding: 140px 5%;
     text-align: center;
     background: var(--dark);
 }
 
 .p-cta-inner h2 {
     font-family: 'Cinzel', serif;
-    font-size: 2.8rem;
+    font-size: 3rem;
     color: var(--gold-light);
     margin-bottom: 15px;
 }
 
 .p-cta-inner p {
     font-family: 'Montserrat', sans-serif;
-    color: rgba(229, 217, 195, 0.6);
-    margin-bottom: 35px;
+    color: rgba(229, 217, 195, 0.65);
+    margin-bottom: 40px;
+    font-size: 1.1rem;
 }
 
 .p-btn-gold {
     display: inline-block;
-    padding: 18px 45px;
+    padding: 20px 50px;
     background: var(--gold);
     color: var(--dark);
     font-family: 'Montserrat', sans-serif;
     font-weight: 700;
-    font-size: 0.8rem;
+    font-size: 0.85rem;
     text-transform: uppercase;
     letter-spacing: 3px;
     text-decoration: none;
@@ -687,7 +706,7 @@ body.bg-dark {
 }
 
 /* ============================================================
-   ABOUT PAGE STYLES (DESPRE.HTML)
+   ABOUT PAGE STYLES (DESPRE.HTML LAPTOP OPTIMIZED)
    ============================================================ */
 .about-cinematic {
     padding-top: 90px;
@@ -695,7 +714,7 @@ body.bg-dark {
 
 .about-hero {
     position: relative;
-    height: 60vh;
+    height: 65vh;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -705,7 +724,7 @@ body.bg-dark {
 
 .hero-content-modern h1 {
     font-family: 'Cinzel', serif;
-    font-size: clamp(2.2rem, 5vw, 4rem);
+    font-size: clamp(2.5rem, 5vw, 4.2rem);
     color: var(--light);
 }
 
@@ -718,9 +737,11 @@ body.bg-dark {
 .about-intro-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 60px;
+    gap: 80px;
     padding: 120px 10%;
     align-items: center;
+    max-width: 1400px;
+    margin: 0 auto;
 }
 
 .intro-image-box img {
@@ -741,31 +762,34 @@ body.bg-dark {
 
 .intro-text-box h2 {
     font-family: 'Cinzel', serif;
-    font-size: 2.4rem;
+    font-size: 2.6rem;
     color: var(--gold-light);
     margin-bottom: 25px;
 }
 
 .intro-text-box p {
     font-family: 'Montserrat', sans-serif;
-    color: rgba(229, 217, 195, 0.7);
+    color: rgba(229, 217, 195, 0.75);
     line-height: 1.9;
     margin-bottom: 20px;
+    font-size: 1.05rem;
 }
 
 .piling-services {
-    padding: 100px 10%;
+    padding: 120px 10%;
     background: var(--dark-soft);
 }
 
 .services-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    grid-template-columns: repeat(3, 1fr);
     gap: 40px;
+    max-width: 1400px;
+    margin: 0 auto;
 }
 
 .service-block {
-    padding: 40px;
+    padding: 45px;
     background: rgba(255,255,255,0.02);
     border: 1px solid var(--border-dark);
 }
@@ -773,25 +797,25 @@ body.bg-dark {
 .service-block h3 {
     font-family: 'Cinzel', serif;
     color: var(--gold-light);
-    font-size: 1.4rem;
+    font-size: 1.5rem;
     margin: 15px 0;
 }
 
 .service-block p {
     font-family: 'Montserrat', sans-serif;
-    color: rgba(229, 217, 195, 0.6);
-    line-height: 1.7;
+    color: rgba(229, 217, 195, 0.65);
+    line-height: 1.8;
 }
 
 .about-promise {
-    padding: 120px 5%;
+    padding: 140px 5%;
     text-align: center;
     background: var(--dark);
 }
 
 .promise-content h2 {
     font-family: 'Cinzel', serif;
-    font-size: 3rem;
+    font-size: 3.2rem;
     color: var(--light);
     margin-bottom: 20px;
 }
@@ -803,15 +827,18 @@ body.bg-dark {
 
 .promise-content p {
     font-family: 'Montserrat', sans-serif;
-    color: rgba(229, 217, 195, 0.6);
+    color: rgba(229, 217, 195, 0.65);
     margin-bottom: 40px;
+    font-size: 1.1rem;
 }
 
 /* ============================================================
-   CONTACT PAGE STYLES (CONTACT.HTML)
+   CONTACT PAGE STYLES (CONTACT.HTML LAPTOP OPTIMIZED)
    ============================================================ */
 .contact-premium {
-    padding: 160px 10% 100px 10%;
+    padding: 160px 10% 120px 10%;
+    max-width: 1400px;
+    margin: 0 auto;
 }
 
 .contact-intro {
@@ -821,21 +848,22 @@ body.bg-dark {
 
 .contact-intro h1 {
     font-family: 'Cinzel', serif;
-    font-size: clamp(2.2rem, 5vw, 3.8rem);
+    font-size: clamp(2.5rem, 5vw, 4rem);
     color: var(--gold-light);
     margin-bottom: 15px;
 }
 
 .contact-intro p {
     font-family: 'Montserrat', sans-serif;
-    color: rgba(229, 217, 195, 0.6);
-    font-size: 1.1rem;
+    color: rgba(229, 217, 195, 0.65);
+    font-size: 1.15rem;
 }
 
 .contact-grid {
     display: grid;
-    grid-template-columns: 0.8fr 1.2fr;
-    gap: 60px;
+    grid-template-columns: 1fr 1.3fr;
+    gap: 80px;
+    align-items: start;
 }
 
 .info-block {
@@ -845,17 +873,18 @@ body.bg-dark {
 .info-block h3 {
     font-family: 'Cinzel', serif;
     color: var(--gold);
-    font-size: 1.2rem;
+    font-size: 1.3rem;
     margin-bottom: 15px;
     letter-spacing: 2px;
 }
 
 .contact-link-active {
     font-family: 'Montserrat', sans-serif;
-    color: rgba(229, 217, 195, 0.8);
+    color: rgba(229, 217, 195, 0.85);
     text-decoration: none;
     display: block;
-    margin-bottom: 8px;
+    margin-bottom: 10px;
+    font-size: 1.05rem;
     transition: 0.3s ease;
 }
 
@@ -865,24 +894,25 @@ body.bg-dark {
     font-family: 'Playfair Display', serif;
     font-style: italic;
     color: var(--gold-light);
-    font-size: 1.2rem;
+    font-size: 1.3rem;
     border-left: 2px solid var(--gold);
-    padding-left: 20px;
-    margin-top: 40px;
+    padding-left: 25px;
+    margin-top: 50px;
+    line-height: 1.7;
 }
 
-/* FORMULAR MODERN */
+/* FORMULAR MODERN LAPTOP */
 .form-wrapper {
     background: rgba(15, 15, 15, 0.6);
-    padding: 50px;
+    padding: 55px;
     border: 1px solid var(--border-dark);
 }
 
 .modern-form .input-row {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 25px;
-    margin-bottom: 25px;
+    gap: 30px;
+    margin-bottom: 15px;
 }
 
 .input-group {
@@ -904,8 +934,8 @@ body.bg-dark {
 .input-group select, 
 .input-group textarea {
     background: #000;
-    border: 1px solid rgba(197, 164, 126, 0.2);
-    padding: 15px;
+    border: 1px solid rgba(197, 164, 126, 0.25);
+    padding: 16px;
     color: var(--light);
     font-family: 'Inter', sans-serif;
     font-size: 0.95rem;
@@ -917,12 +947,12 @@ body.bg-dark {
 .input-group select:focus, 
 .input-group textarea:focus {
     border-color: var(--gold);
-    box-shadow: 0 0 10px rgba(197, 164, 126, 0.15);
+    box-shadow: 0 0 12px rgba(197, 164, 126, 0.18);
 }
 
 .btn-premium {
     width: 100%;
-    padding: 20px;
+    padding: 22px;
     background: var(--gold);
     color: var(--dark);
     border: none;
@@ -1058,7 +1088,7 @@ body.bg-dark {
 .back-to-top a { font-family: 'Montserrat', sans-serif; font-size: 0.65rem; text-transform: uppercase; color: var(--gold); text-decoration: none; letter-spacing: 2px; }
 
 /* ============================================================
-   RESPONSIVE COMPLETO (TABLETĂ & MOBIL)
+   RESPONSIVE EXACT PENTRU MOBIL ȘI TABLETĂ (FĂRĂ ATINGERE MOBIL!)
    ============================================================ */
 @media (max-width: 1024px) {
     .v-header-container { padding: 0 30px !important; }
@@ -1099,6 +1129,7 @@ body.bg-dark {
     .rand, .rand:nth-child(even) { flex-direction: column !important; text-align: center; gap: 30px; }
     .p-diptic { grid-template-columns: 1fr; }
     .about-intro-grid { grid-template-columns: 1fr; gap: 40px; }
+    .services-container { grid-template-columns: 1fr; }
     .contact-grid { grid-template-columns: 1fr; gap: 40px; }
     .footer-grid { grid-template-columns: 1fr 1fr; gap: 30px; }
 }
