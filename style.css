@@ -447,31 +447,32 @@ body.bg-dark {
 }
 
 /* ============================================================
-   PORTOFOLIO PAGE STYLES (PORTOFOLIU.HTML LAPTOP OPTIMIZED)
+   PORTOFOLIO PAGE STYLES (PORTOFOLIU.HTML REPARAT LAPTOP)
    ============================================================ */
 .portfolio-v3 {
     padding-top: 90px;
+    background-color: var(--dark);
 }
 
 .p-hero {
-    padding: 120px 5% 60px 5%;
+    padding: 100px 5% 40px 5%;
     text-align: center;
     background-color: var(--dark);
 }
 
 .p-reveal-tag {
     font-family: 'Montserrat', sans-serif;
-    font-size: 0.7rem;
+    font-size: 0.75rem;
     text-transform: uppercase;
     letter-spacing: 4px;
     color: var(--gold);
     display: block;
-    margin-bottom: 20px;
+    margin-bottom: 15px;
 }
 
 .p-main-title {
     font-family: 'Cinzel', serif;
-    font-size: clamp(2.5rem, 5vw, 4.2rem);
+    font-size: clamp(2.2rem, 4.5vw, 4rem);
     color: var(--light);
 }
 
@@ -481,7 +482,7 @@ body.bg-dark {
     color: var(--gold);
 }
 
-/* VIDEO SECTION LAPTOP */
+/* VIDEO SECTION */
 .p-video-full {
     width: 100%;
     margin: 40px 0;
@@ -490,8 +491,8 @@ body.bg-dark {
 .p-video-wrapper-full {
     position: relative;
     width: 100%;
-    height: 75vh;
-    max-height: 750px;
+    height: 60vh;
+    max-height: 600px;
     overflow: hidden;
 }
 
@@ -513,117 +514,128 @@ body.bg-dark {
 
 .v-scroll-phrase {
     font-family: 'Cinzel', serif;
-    font-size: clamp(2.5rem, 6vw, 5rem);
+    font-size: clamp(2rem, 5vw, 4.5rem);
     color: var(--gold-light);
-    letter-spacing: 10px;
+    letter-spacing: 8px;
     text-shadow: 0 10px 30px rgba(0,0,0,0.8);
 }
 
-/* DIPICT BEFORE/AFTER LAPTOP */
+/* DIPICT BEFORE/AFTER (2 COLOANE PE LAPTOP) */
 .p-project-entry {
-    padding: 100px 10%;
-    max-width: 1400px;
+    padding: 80px 8%;
+    max-width: 1300px;
     margin: 0 auto;
 }
 
 .p-diptic {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 40px;
-    margin-bottom: 40px;
+    display: grid !important;
+    grid-template-columns: 1fr 1fr !important;
+    gap: 30px !important;
+    margin-bottom: 40px !important;
+    align-items: center;
 }
 
 .p-frame {
     position: relative;
     border: 1px solid var(--border-dark);
     overflow: hidden;
+    background: #0d0d0d;
+    width: 100%;
 }
 
 .p-frame img {
-    width: 100%;
-    height: 550px;
-    object-fit: cover;
-    display: block;
+    width: 100% !important;
+    height: 420px !important;
+    object-fit: cover !important;
+    display: block !important;
 }
 
 .p-meta-tag {
     position: absolute;
-    bottom: 20px;
-    left: 20px;
+    bottom: 15px;
+    left: 15px;
     background: rgba(5,5,5,0.85);
-    padding: 8px 18px;
+    padding: 6px 14px;
     font-family: 'Montserrat', sans-serif;
     font-size: 0.65rem;
     text-transform: uppercase;
     letter-spacing: 2px;
     color: var(--gold);
     border: 1px solid var(--border-dark);
+    z-index: 2;
 }
 
 .p-description-grid {
-    display: flex;
-    gap: 30px;
-    align-items: flex-start;
+    display: grid !important;
+    grid-template-columns: 80px 1fr !important;
+    gap: 20px !important;
+    align-items: start !important;
+    margin-top: 30px !important;
+    padding-top: 20px;
+    border-top: 1px solid rgba(197, 164, 126, 0.1);
 }
 
 .p-number {
-    font-family: 'Cinzel', serif;
-    font-size: 2.2rem;
-    color: var(--gold);
+    font-family: 'Cinzel', serif !important;
+    font-size: 2.5rem !important;
+    color: var(--gold) !important;
+    line-height: 1 !important;
 }
 
 .p-info h2 {
-    font-family: 'Cinzel', serif;
-    color: var(--gold-light);
-    font-size: 2rem;
-    margin-bottom: 15px;
+    font-family: 'Cinzel', serif !important;
+    color: var(--gold-light) !important;
+    font-size: 2rem !important;
+    margin-bottom: 15px !important;
 }
 
 .p-info p {
-    font-family: 'Montserrat', sans-serif;
-    color: rgba(229, 217, 195, 0.7);
-    line-height: 1.8;
-    margin-bottom: 20px;
-    font-size: 1.05rem;
+    font-family: 'Montserrat', sans-serif !important;
+    color: rgba(229, 217, 195, 0.75) !important;
+    line-height: 1.8 !important;
+    margin-bottom: 20px !important;
+    font-size: 1rem !important;
 }
 
 .p-link-luxury {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 0.8rem;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    color: var(--gold);
-    text-decoration: none;
-    border-bottom: 1px solid var(--gold);
-    padding-bottom: 3px;
-    transition: 0.3s ease;
+    font-family: 'Montserrat', sans-serif !important;
+    font-size: 0.75rem !important;
+    text-transform: uppercase !important;
+    letter-spacing: 2px !important;
+    color: var(--gold) !important;
+    text-decoration: none !important;
+    border-bottom: 1px solid var(--gold) !important;
+    padding-bottom: 4px !important;
+    display: inline-block !important;
+    transition: 0.3s ease !important;
 }
 
 .p-link-luxury:hover {
-    color: var(--gold-light);
-    border-color: var(--gold-light);
+    color: var(--gold-light) !important;
+    border-color: var(--gold-light) !important;
 }
 
-/* CAROUSEL GALLERY LAPTOP */
+/* CAROUSEL SHOWCASE */
 .p-gallery-showcase {
-    padding: 100px 5%;
+    padding: 80px 5%;
     background: var(--dark-soft);
+    border-top: 1px solid var(--border-dark);
 }
 
 .p-gallery-header {
     text-align: center;
-    margin-bottom: 50px;
+    margin-bottom: 40px;
 }
 
 .p-gallery-header h2 {
     font-family: 'Cinzel', serif;
-    font-size: 2.8rem;
+    font-size: 2.5rem;
     color: var(--gold-light);
 }
 
 .p-carousel {
     position: relative;
-    max-width: 1100px;
+    max-width: 1000px;
     margin: 0 auto;
 }
 
@@ -643,7 +655,7 @@ body.bg-dark {
 
 .p-slide img {
     width: 100%;
-    height: 650px;
+    height: 550px;
     object-fit: cover;
     display: block;
 }
@@ -655,26 +667,26 @@ body.bg-dark {
     background: rgba(5,5,5,0.85);
     border: 1px solid var(--gold);
     color: var(--gold);
-    font-size: 1.8rem;
-    padding: 15px 22px;
+    font-size: 1.5rem;
+    padding: 12px 18px;
     cursor: pointer;
     z-index: 10;
     transition: 0.3s ease;
 }
 
 .p-nav:hover { background: var(--gold); color: var(--dark); }
-.p-prev { left: -30px; }
-.p-next { right: -30px; }
+.p-prev { left: -25px; }
+.p-next { right: -25px; }
 
 .p-final-cta {
-    padding: 140px 5%;
+    padding: 100px 5%;
     text-align: center;
     background: var(--dark);
 }
 
 .p-cta-inner h2 {
     font-family: 'Cinzel', serif;
-    font-size: 3rem;
+    font-size: 2.5rem;
     color: var(--gold-light);
     margin-bottom: 15px;
 }
@@ -682,18 +694,17 @@ body.bg-dark {
 .p-cta-inner p {
     font-family: 'Montserrat', sans-serif;
     color: rgba(229, 217, 195, 0.65);
-    margin-bottom: 40px;
-    font-size: 1.1rem;
+    margin-bottom: 30px;
 }
 
 .p-btn-gold {
     display: inline-block;
-    padding: 20px 50px;
+    padding: 18px 45px;
     background: var(--gold);
     color: var(--dark);
     font-family: 'Montserrat', sans-serif;
     font-weight: 700;
-    font-size: 0.85rem;
+    font-size: 0.8rem;
     text-transform: uppercase;
     letter-spacing: 3px;
     text-decoration: none;
@@ -1088,7 +1099,7 @@ body.bg-dark {
 .back-to-top a { font-family: 'Montserrat', sans-serif; font-size: 0.65rem; text-transform: uppercase; color: var(--gold); text-decoration: none; letter-spacing: 2px; }
 
 /* ============================================================
-   RESPONSIVE EXACT PENTRU MOBIL ȘI TABLETĂ (FĂRĂ ATINGERE MOBIL!)
+   RESPONSIVE COMPLETO (MOBIL & TABLETĂ - FĂRĂ ATINGERE MOBIL)
    ============================================================ */
 @media (max-width: 1024px) {
     .v-header-container { padding: 0 30px !important; }
@@ -1127,7 +1138,8 @@ body.bg-dark {
     .v-action { display: none !important; }
 
     .rand, .rand:nth-child(even) { flex-direction: column !important; text-align: center; gap: 30px; }
-    .p-diptic { grid-template-columns: 1fr; }
+    .p-diptic { grid-template-columns: 1fr !important; }
+    .p-description-grid { grid-template-columns: 1fr !important; }
     .about-intro-grid { grid-template-columns: 1fr; gap: 40px; }
     .services-container { grid-template-columns: 1fr; }
     .contact-grid { grid-template-columns: 1fr; gap: 40px; }
@@ -1145,8 +1157,8 @@ body.bg-dark {
     .form-wrapper { padding: 25px; }
     .footer-grid { grid-template-columns: 1fr; }
     .footer-bottom { flex-direction: column; gap: 15px; text-align: center; }
-    .p-frame img { height: 350px; }
-    .p-slide img { height: 380px; }
+    .p-frame img { height: 350px !important; }
+    .p-slide img { height: 380px !important; }
     .p-nav { padding: 10px 14px; font-size: 1.1rem; }
     .p-prev { left: 5px; }
     .p-next { right: 5px; }
